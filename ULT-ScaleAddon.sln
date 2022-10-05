@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScaleAddon", "ScaleAddon\ScaleAddon.csproj", "{8D32352B-AB62-4359-99F3-214335EBF67B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AcumaticaSync", "AcumaticaSync\AcumaticaSync.csproj", "{43598E22-4A2C-4A47-BEA3-97476294B14A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acumatica.RESTClient", "Acumatica.RESTClient\Acumatica.RESTClient.csproj", "{25008D3F-3D78-4BB9-B14B-0A792AE97892}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acumatica.ULT_18.200.001", "Acumatica.ULT_1.0\Acumatica.ULT_18.200.001.csproj", "{84B187A8-4D74-444A-86A8-D19E766DBDBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acumatica.Auth", "Acumatica.Auth\Acumatica.Auth.csproj", "{5B17772D-1F76-4A4B-A3F7-8C8CFFA93E29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acumatica REST API Example", "Acumatica REST API Console Application\Acumatica REST API Example.csproj", "{201508E8-B057-4EFB-AD9D-74C777339C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerialWrite", "SerialWrite\SerialWrite.csproj", "{5FF59CD4-7286-418C-8C68-E0DA05063BCB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D32352B-AB62-4359-99F3-214335EBF67B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D32352B-AB62-4359-99F3-214335EBF67B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D32352B-AB62-4359-99F3-214335EBF67B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D32352B-AB62-4359-99F3-214335EBF67B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43598E22-4A2C-4A47-BEA3-97476294B14A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43598E22-4A2C-4A47-BEA3-97476294B14A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43598E22-4A2C-4A47-BEA3-97476294B14A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43598E22-4A2C-4A47-BEA3-97476294B14A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25008D3F-3D78-4BB9-B14B-0A792AE97892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25008D3F-3D78-4BB9-B14B-0A792AE97892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25008D3F-3D78-4BB9-B14B-0A792AE97892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25008D3F-3D78-4BB9-B14B-0A792AE97892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84B187A8-4D74-444A-86A8-D19E766DBDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84B187A8-4D74-444A-86A8-D19E766DBDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84B187A8-4D74-444A-86A8-D19E766DBDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84B187A8-4D74-444A-86A8-D19E766DBDBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B17772D-1F76-4A4B-A3F7-8C8CFFA93E29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B17772D-1F76-4A4B-A3F7-8C8CFFA93E29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B17772D-1F76-4A4B-A3F7-8C8CFFA93E29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B17772D-1F76-4A4B-A3F7-8C8CFFA93E29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{201508E8-B057-4EFB-AD9D-74C777339C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{201508E8-B057-4EFB-AD9D-74C777339C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{201508E8-B057-4EFB-AD9D-74C777339C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{201508E8-B057-4EFB-AD9D-74C777339C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FF59CD4-7286-418C-8C68-E0DA05063BCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FF59CD4-7286-418C-8C68-E0DA05063BCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FF59CD4-7286-418C-8C68-E0DA05063BCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FF59CD4-7286-418C-8C68-E0DA05063BCB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93E8067D-EF17-4295-8C5B-6F550E356986}
+	EndGlobalSection
+EndGlobal

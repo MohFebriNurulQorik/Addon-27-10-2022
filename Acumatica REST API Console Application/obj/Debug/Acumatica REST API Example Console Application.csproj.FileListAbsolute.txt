@@ -1,0 +1,47 @@
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\DefaultEndpoint_18.200.001.dll
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\SOAPLikeWrapperForREST.dll
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\DefaultEndpoint_18.200.001.pdb
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\DefaultEndpoint_18.200.001.dll.config
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\SOAPLikeWrapperForREST.pdb
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\SOAPLikeWrapperForREST.dll.config
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example Console Application.csprojAssemblyReference.cache
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example Console Application.csproj.CoreCompileInputs.cache
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example Console Application.csproj.CopyComplete
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Projects\AcumaticaRESTAPIClientForCSharp\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example Console Application.csprojAssemblyReference.cache
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example Console Application.csproj.CoreCompileInputs.cache
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_1.0.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_1.0.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_1.0.dll.config
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example Console Application.csproj.CopyComplete

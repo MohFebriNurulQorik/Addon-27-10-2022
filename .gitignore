@@ -1,0 +1,11 @@
+.vs/ULT-ScaleAddon/v16/.suo
+ScaleAddon/obj/
+Acumatica.Auth/obj/Debug/
+Acumatica.ULT_1.0/obj/
+Acumatica.RESTClient/obj/
+Acumatica.ULT_1.0/obj/
+ScaleAddon/obj/*
+Acumatica.Auth/obj/Debug/*
+Acumatica.ULT_1.0/obj/*
+Acumatica.RESTClient/obj/*
+Acumatica.ULT_1.0/obj/*

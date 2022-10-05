@@ -1,0 +1,70 @@
+D:\Acumatica\addOnDestop\SerialWrite\bin\Debug\SerialWrite.exe.config
+D:\Acumatica\addOnDestop\SerialWrite\bin\Debug\SerialWrite.exe
+D:\Acumatica\addOnDestop\SerialWrite\bin\Debug\SerialWrite.pdb
+D:\Acumatica\addOnDestop\SerialWrite\obj\Debug\SerialWrite.csproj.AssemblyReference.cache
+D:\Acumatica\addOnDestop\SerialWrite\obj\Debug\SerialWrite.csproj.CoreCompileInputs.cache
+D:\Acumatica\addOnDestop\SerialWrite\obj\Debug\SerialWrite.exe
+D:\Acumatica\addOnDestop\SerialWrite\obj\Debug\SerialWrite.pdb
+D:\Acumatica\AddOnDesktop\SerialWrite\bin\Debug\SerialWrite.exe.config
+D:\Acumatica\AddOnDesktop\SerialWrite\bin\Debug\SerialWrite.exe
+D:\Acumatica\AddOnDesktop\SerialWrite\bin\Debug\SerialWrite.pdb
+D:\Acumatica\AddOnDesktop\SerialWrite\obj\Debug\SerialWrite.csproj.AssemblyReference.cache
+D:\Acumatica\AddOnDesktop\SerialWrite\obj\Debug\SerialWrite.csproj.CoreCompileInputs.cache
+D:\Acumatica\AddOnDesktop\SerialWrite\obj\Debug\SerialWrite.exe
+D:\Acumatica\AddOnDesktop\SerialWrite\obj\Debug\SerialWrite.pdb
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\bin\Debug\SerialWrite.exe.config
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\bin\Debug\SerialWrite.exe
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\bin\Debug\SerialWrite.pdb
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\bin\Debug\ExcelDataReader.dll
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\bin\Debug\ExcelDataReader.pdb
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\bin\Debug\ExcelDataReader.xml
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\obj\Debug\SerialWrite.csproj.AssemblyReference.cache
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\obj\Debug\SerialWrite.csproj.CoreCompileInputs.cache
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\obj\Debug\SerialWrite.csproj.CopyComplete
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\obj\Debug\SerialWrite.exe
+D:\Acumatica\AddOn-Desktop_21R2-V2\SerialWrite\obj\Debug\SerialWrite.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\bin\Debug\SerialWrite.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\bin\Debug\SerialWrite.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\bin\Debug\SerialWrite.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\bin\Debug\ExcelDataReader.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\bin\Debug\ExcelDataReader.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\bin\Debug\ExcelDataReader.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\obj\Debug\SerialWrite.csproj.AssemblyReference.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\obj\Debug\SerialWrite.csproj.SuggestedBindingRedirects.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\obj\Debug\SerialWrite.csproj.CoreCompileInputs.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\obj\Debug\SerialWrite.csproj.CopyComplete
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\obj\Debug\SerialWrite.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\SerialWrite\obj\Debug\SerialWrite.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\bin\Debug\SerialWrite.exe.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\bin\Debug\SerialWrite.exe
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\bin\Debug\SerialWrite.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\bin\Debug\ExcelDataReader.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\bin\Debug\ExcelDataReader.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\bin\Debug\ExcelDataReader.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\obj\Debug\SerialWrite.csproj.CoreCompileInputs.cache
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\obj\Debug\SerialWrite.csproj.CopyComplete
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\obj\Debug\SerialWrite.exe
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\SerialWrite\obj\Debug\SerialWrite.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\SerialWrite.exe.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\SerialWrite.exe
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\SerialWrite.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\ExcelDataReader.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\ExcelDataReader.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\ExcelDataReader.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.csproj.AssemblyReference.cache
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.csproj.CoreCompileInputs.cache
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.csproj.CopyComplete
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.exe
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\SerialWrite.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\SerialWrite.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\SerialWrite.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\ExcelDataReader.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\ExcelDataReader.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\bin\Debug\ExcelDataReader.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.csproj.AssemblyReference.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.csproj.SuggestedBindingRedirects.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.csproj.CoreCompileInputs.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.csproj.CopyComplete
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\SerialWrite\obj\Debug\SerialWrite.pdb

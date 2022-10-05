@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS1705: Assembly 'Acumatica.RESTClient' with identity 'Acumatica.RESTClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null' uses 'RestSharp, Version=106.12.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75' which has a higher version than referenced assembly 'RestSharp' with identity 'RestSharp, Version=106.11.4.0, Culture=neutral, PublicKeyToken=598062e77f915f75'
+dotnet_diagnostic.CS1705.severity = error

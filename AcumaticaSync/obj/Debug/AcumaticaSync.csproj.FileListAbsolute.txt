@@ -1,0 +1,372 @@
+D:\Acumatica\addOnDestop\AcumaticaSync\bin\Debug\AcumaticaSync.exe.config
+D:\Acumatica\addOnDestop\AcumaticaSync\bin\Debug\AcumaticaSync.exe
+D:\Acumatica\addOnDestop\AcumaticaSync\bin\Debug\AcumaticaSync.pdb
+D:\Acumatica\addOnDestop\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.AssemblyReference.cache
+D:\Acumatica\addOnDestop\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CoreCompileInputs.cache
+D:\Acumatica\addOnDestop\AcumaticaSync\obj\Debug\AcumaticaSync.exe
+D:\Acumatica\addOnDestop\AcumaticaSync\obj\Debug\AcumaticaSync.pdb
+D:\Acumatica\AddOnDesktop\AcumaticaSync\bin\Debug\AcumaticaSync.exe.config
+D:\Acumatica\AddOnDesktop\AcumaticaSync\bin\Debug\AcumaticaSync.exe
+D:\Acumatica\AddOnDesktop\AcumaticaSync\bin\Debug\AcumaticaSync.pdb
+D:\Acumatica\AddOnDesktop\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.AssemblyReference.cache
+D:\Acumatica\AddOnDesktop\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CoreCompileInputs.cache
+D:\Acumatica\AddOnDesktop\AcumaticaSync\obj\Debug\AcumaticaSync.exe
+D:\Acumatica\AddOnDesktop\AcumaticaSync\obj\Debug\AcumaticaSync.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\AcumaticaSync.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\AcumaticaSync.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\AcumaticaSync.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ExcelDataReader.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ScaleAddon.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\QRCoder.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Acumatica.Auth.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\RestSharp.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Newtonsoft.Json.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Text.Json.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\JsonSubTypes.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Memory.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.ValueTuple.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Numerics.Vectors.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Buffers.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ScaleAddon.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ScaleAddon.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ExcelDataReader.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ExcelDataReader.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Acumatica.Auth.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Acumatica.Auth.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Acumatica.RESTClient.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\RestSharp.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Newtonsoft.Json.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Text.Json.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Memory.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.ValueTuple.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Numerics.Vectors.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Buffers.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.AssemblyReference.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.SuggestedBindingRedirects.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CoreCompileInputs.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CopyComplete
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\obj\Debug\AcumaticaSync.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\AcumaticaSync\obj\Debug\AcumaticaSync.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\AcumaticaSync.exe.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\AcumaticaSync.exe
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\AcumaticaSync.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ExcelDataReader.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ScaleAddon.exe
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\QRCoder.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Acumatica.Auth.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\RestSharp.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Newtonsoft.Json.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Text.Json.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\JsonSubTypes.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Memory.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.ValueTuple.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Numerics.Vectors.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Buffers.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ScaleAddon.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ScaleAddon.exe.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ExcelDataReader.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ExcelDataReader.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Acumatica.Auth.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Acumatica.Auth.dll.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Acumatica.RESTClient.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\RestSharp.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Newtonsoft.Json.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Text.Json.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Memory.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.ValueTuple.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Numerics.Vectors.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Buffers.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.AssemblyReference.cache
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CoreCompileInputs.cache
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CopyComplete
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\obj\Debug\AcumaticaSync.exe
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\AcumaticaSync\obj\Debug\AcumaticaSync.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\AcumaticaSync.exe.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\AcumaticaSync.exe
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\AcumaticaSync.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ScaleAddon.exe
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\QRCoder.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.Auth.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\RestSharp.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Newtonsoft.Json.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Json.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\JsonSubTypes.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Memory.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.ValueTuple.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Numerics.Vectors.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Buffers.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ScaleAddon.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ScaleAddon.exe.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.Auth.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.Auth.dll.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.RESTClient.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\RestSharp.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Newtonsoft.Json.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Json.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Memory.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.ValueTuple.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Numerics.Vectors.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Buffers.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.AssemblyReference.cache
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CoreCompileInputs.cache
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CopyComplete
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.exe
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\AcumaticaSync.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\AcumaticaSync.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\AcumaticaSync.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ScaleAddon.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\QRCoder.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.Auth.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\RestSharp.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Newtonsoft.Json.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Json.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.Common.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\JsonSubTypes.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Memory.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.ValueTuple.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Numerics.Vectors.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Buffers.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.SqlServer.Types.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ScaleAddon.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ScaleAddon.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.Auth.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.Auth.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.RESTClient.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ExcelDataReader.DataSet.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\RestSharp.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Newtonsoft.Json.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Json.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Memory.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Text.Encodings.Web.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.ValueTuple.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Numerics.Vectors.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Buffers.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.Common.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\de\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\es\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\fr\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\it\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ja\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ko\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\pt\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\ru\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\bin\Debug\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.AssemblyReference.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.SuggestedBindingRedirects.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CoreCompileInputs.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.csproj.CopyComplete
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\AcumaticaSync\obj\Debug\AcumaticaSync.pdb

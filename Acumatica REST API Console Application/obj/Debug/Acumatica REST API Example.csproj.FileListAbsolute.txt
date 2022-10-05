@@ -1,0 +1,212 @@
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csprojAssemblyReference.cache
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Projects\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Project Code\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\ULTID\Sunartha\Origin - 21.9.16.1\ULT-ScaleAddon\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\addOnDestop\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\AddOnDesktop\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.SuggestedBindingRedirects.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-R2\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.pdb
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\Addon-R2 - Copy\Addon-R2 - Copy\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.pdb
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Acumatica\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\AcumaticaRestApiExample.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\RestSharp.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\JsonSubTypes.dll
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.Auth.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Acumatica.RESTClient.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ULTEndpoint_18.200.001.dll.config
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.pdb
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\ExcelDataReader.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\RestSharp.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\bin\Debug\Newtonsoft.Json.xml
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.AssemblyReference.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.SuggestedBindingRedirects.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CoreCompileInputs.cache
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\Acumatica REST API Example.csproj.CopyComplete
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.exe
+D:\Kantor\ULTID\Sunartha\maintenece\Addon-Desktop_21R2-V2_Qori 220912\Acumatica REST API Console Application\obj\Debug\AcumaticaRestApiExample.pdb

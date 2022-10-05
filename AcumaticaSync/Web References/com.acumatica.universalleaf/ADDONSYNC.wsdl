@@ -1,0 +1,2495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.acumatica.com/generic/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.acumatica.com/generic/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.acumatica.com/generic/">
+      <s:complexType name="ProcessResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ProcessStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="Seconds" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ProcessStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="NotExists" />
+          <s:enumeration value="InProcess" />
+          <s:enumeration value="Completed" />
+          <s:enumeration value="Aborted" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetScenario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="scenario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScenarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScenarioResult" type="tns:ArrayOfCommand" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCommand">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Command" nillable="true" type="tns:Command" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Command">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FieldName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ObjectName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="Commit" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="IgnoreError" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LinkedCommand" type="tns:Command" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descriptor" type="tns:ElementDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ElementDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="IsDisabled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" default="false" name="IsRequired" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" default="String" name="ElementType" type="tns:ElementTypes" />
+          <s:element minOccurs="0" maxOccurs="1" default="0" name="LengthLimit" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="InputMask" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayRules" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllowedValues" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ElementTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="String" />
+          <s:enumeration value="AsciiString" />
+          <s:enumeration value="StringSelector" />
+          <s:enumeration value="ExplicitSelector" />
+          <s:enumeration value="Number" />
+          <s:enumeration value="Option" />
+          <s:enumeration value="WideOption" />
+          <s:enumeration value="Calendar" />
+          <s:enumeration value="Action" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SchemaMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Basic" />
+          <s:enumeration value="Detailed" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EveryValue">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Key">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Action">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Field">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Value">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Field">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" default="false" name="IsError" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Answer">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RowNumber">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="NewRow">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DeleteRow">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Parameter">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Command" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Attachment">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Field" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfFilter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Filter" nillable="true" type="tns:Filter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Filter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Field" type="tns:Field" />
+          <s:element minOccurs="1" maxOccurs="1" name="Condition" type="tns:FilterCondition" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value2" />
+          <s:element minOccurs="1" maxOccurs="1" name="OpenBrackets" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CloseBrackets" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Operator" type="tns:FilterOperator" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="FilterCondition">
+        <s:restriction base="s:string">
+          <s:enumeration value="Equals" />
+          <s:enumeration value="NotEqual" />
+          <s:enumeration value="Greater" />
+          <s:enumeration value="GreaterOrEqual" />
+          <s:enumeration value="Less" />
+          <s:enumeration value="LessOrEqual" />
+          <s:enumeration value="Contain" />
+          <s:enumeration value="StartsWith" />
+          <s:enumeration value="EndsWith" />
+          <s:enumeration value="NotContain" />
+          <s:enumeration value="Between" />
+          <s:enumeration value="IsNull" />
+          <s:enumeration value="IsNotNull" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="FilterOperator">
+        <s:restriction base="s:string">
+          <s:enumeration value="And" />
+          <s:enumeration value="Or" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="tns:ErrorCode" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Session" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ErrorCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="OK" />
+          <s:enumeration value="INVALID_CREDENTIALS" />
+          <s:enumeration value="INTERNAL_ERROR" />
+          <s:enumeration value="INVALID_API_VERSION" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:LoginResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Logout">
+        <s:complexType />
+      </s:element>
+      <s:element name="LogoutResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetBusinessDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetBusinessDateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetLocaleName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="localeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetLocaleNameResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetSchemaMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mode" type="tns:SchemaMode" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetSchemaModeResponse">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="AP303000Content">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Actions" type="tns:AP303000Actions" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorSummary" type="tns:AP303000VendorSummary" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfoMainAddress" type="tns:AP303000GeneralInfoMainAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSettingsRemittanceAddress" type="tns:AP303000PaymentSettingsRemittanceAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfoMainContact" type="tns:AP303000GeneralInfoMainContact" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfoPersonalDataPrivacy" type="tns:AP303000GeneralInfoPersonalDataPrivacy" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseSettingsShipperSContact" type="tns:AP303000PurchaseSettingsShipperSContact" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSettingsRemittanceContact" type="tns:AP303000PaymentSettingsRemittanceContact" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locations" type="tns:AP303000Locations" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSettingsRemittanceContactSameAsMain" type="tns:AP303000PaymentSettingsRemittanceContactSameAsMain" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSettingsRemittanceAddressSameAsMain" type="tns:AP303000PaymentSettingsRemittanceAddressSameAsMain" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSettingsDefaultPaymentSettings" type="tns:AP303000PaymentSettingsDefaultPaymentSettings" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseSettingsShipperSContactSameAsMain" type="tns:AP303000PurchaseSettingsShipperSContactSameAsMain" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseSettingsShipperSAddress" type="tns:AP303000PurchaseSettingsShipperSAddress" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseSettingsDefaultLocationSettings" type="tns:AP303000PurchaseSettingsDefaultLocationSettings" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseSettingsShippingInstructions" type="tns:AP303000PurchaseSettingsShippingInstructions" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseSettingsReceiptActions" type="tns:AP303000PurchaseSettingsReceiptActions" />
+          <s:element minOccurs="0" maxOccurs="1" name="GLAccountsAPAccount" type="tns:AP303000GLAccountsAPAccount" />
+          <s:element minOccurs="0" maxOccurs="1" name="GLAccountsRetainagePayableAccount" type="tns:AP303000GLAccountsRetainagePayableAccount" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contacts" type="tns:AP303000Contacts" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSettingsDefaultPaymentSettingsPaymentInstructions" type="tns:AP303000PaymentSettingsDefaultPaymentSettingsPaymentInstructions" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorSummaryBalance" type="tns:AP303000VendorSummaryBalance" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailingSettingsMailings" type="tns:AP303000MailingSettingsMailings" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailingSettingsRecipients" type="tns:AP303000MailingSettingsRecipients" />
+          <s:element minOccurs="0" maxOccurs="1" name="Activities" type="tns:AP303000Activities" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attributes" type="tns:AP303000Attributes" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuppliedByVendors" type="tns:AP303000SuppliedByVendors" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfo" type="tns:AP303000GeneralInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfoFinancialSettings" type="tns:AP303000GeneralInfoFinancialSettings" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfoVendorProperties" type="tns:AP303000GeneralInfoVendorProperties" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfoRetainageSettings" type="tns:AP303000GeneralInfoRetainageSettings" />
+          <s:element minOccurs="0" maxOccurs="1" name="GLAccounts" type="tns:AP303000GLAccounts" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAgencySettingsDefaultTaxAccounts" type="tns:AP303000TaxAgencySettingsDefaultTaxAccounts" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAgencySettingsPendingVATSettings" type="tns:AP303000TaxAgencySettingsPendingVATSettings" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxAgencySettingsTaxReportSettings" type="tns:AP303000TaxAgencySettingsTaxReportSettings" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecifyNewID" type="tns:AP303000SpecifyNewID" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentSettingsDefaultPaymentSettingsGeneralInfo" type="tns:AP303000PaymentSettingsDefaultPaymentSettingsGeneralInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralInfoVendorSummary" type="tns:AP303000GeneralInfoVendorSummary" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000Actions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CancelCloseToList" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveCloseToList" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Save" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cancel" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Insert" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="CopyDocumentEdit" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="PasteDocumentEdit" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveTemplateEdit" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Delete" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="First" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Prev" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Next" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Last" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewContact" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewContact" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewLocation" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewLocation" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SetDefault" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewMainOnMap" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewDefLocationOnMap" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewTask" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewEvent" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewMailActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="OpenActivityOwner" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewAllActivities" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NNewActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="CNewActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ENewActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="MNewActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="PNewActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="WNewActivity" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewRestrictionGroups" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewCustomer" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewBusnessAccount" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtendToCustomer" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewBalanceDetails" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewRemitOnMap" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewBillAdjustment" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewManualCheck" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorDetails" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApproveBillsForPayments" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayBills" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorPrice" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="BalanceByVendor" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorHistory" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="APAgedPastDue" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="APAgedOutstanding" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="APDocumentRegister" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="RepVendorDetails" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewCustomerAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewBusnessAccountAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewBillAdjustmentAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewManualCheckAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtendToCustomerAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewRestrictionGroupsAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValidateAddressesAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeIDAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorDetailsInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApproveBillsForPaymentsInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayBillsInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorPriceInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="BalanceByVendorReport" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorHistoryReport" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="APAgedPastDueReport" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="APAgedOutstandingReport" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="APDocumentRegisterReport" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="RepVendorDetailsReport" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeID" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveLoc" type="tns:Action" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000VendorSummary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddPopUpNote" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PopUpNoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000VendorSummaryServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000VendorSummaryServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyVendorID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="EveryVendorID" type="tns:EveryValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilterPhone1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilterCity" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilterCountry" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoMainAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Validated" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoMainAddressServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoMainAddressServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Validated" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PaymentSettingsRemittanceAddressServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceAddressServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoMainContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attention" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Web" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone2" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoMainContactServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoMainContactServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoPersonalDataPrivacy">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsentedToTheProcessingOfPersonalData" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateOfConsent" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConsentExpires" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoPersonalDataPrivacyServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoPersonalDataPrivacyServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShipperSContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attention" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone2" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Web" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PurchaseSettingsShipperSContactServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShipperSContactServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceContact">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attention" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone2" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fax" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Web" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PaymentSettingsRemittanceContactServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceContactServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000Locations">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsDefault" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxZone" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpenseAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpenseSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000LocationsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000LocationsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyLocationID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceContactSameAsMain">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SameAsMain" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PaymentSettingsRemittanceContactSameAsMainServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceContactSameAsMainServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceAddressSameAsMain">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SameAsMain" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PaymentSettingsRemittanceAddressSameAsMainServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsRemittanceAddressSameAsMainServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsDefaultPaymentSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentMethod" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CashAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentBy" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentLeadTimeDays" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaySeparately" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrepaymentPercent" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PaymentSettingsDefaultPaymentSettingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsDefaultPaymentSettingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShipperSContactSameAsMain">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SameAsMain" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PurchaseSettingsShipperSContactSameAsMainServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShipperSContactSameAsMainServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShipperSAddress">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SameAsMain" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Validated" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddressLine2" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PurchaseSettingsShipperSAddressServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShipperSAddressServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsDefaultLocationSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceivingBranch" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxZone" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxCalculationMode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxRegistrationID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrintOrders" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SendOrdersByEmail" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PurchaseSettingsDefaultLocationSettingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsDefaultLocationSettingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShippingInstructions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Warehouse" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShippingTerms" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShipVia" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="FOBPoint" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LeadTimeDays" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PurchaseSettingsShippingInstructionsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsShippingInstructionsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsReceiptActions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllowAPBillBeforeReceipt" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinReceipt" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxReceipt" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThresholdReceipt" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptAction" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PurchaseSettingsReceiptActionsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PurchaseSettingsReceiptActionsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GLAccountsAPAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="APSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpenseAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExpenseSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GLAccountsAPAccountServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GLAccountsAPAccountServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GLAccountsRetainagePayableAccount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetainagePayableAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetainagePayableSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GLAccountsRetainagePayableAccountServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GLAccountsRetainagePayableAccountServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000Contacts">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="JobTitle" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone1" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000ContactsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000ContactsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsDefaultPaymentSettingsPaymentInstructions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PaymentSettingsDefaultPaymentSettingsPaymentInstructionsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsDefaultPaymentSettingsPaymentInstructionsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000VendorSummaryBalance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Balance" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrepaymentBalance" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetainedBalance" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000VendorSummaryBalanceServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000VendorSummaryBalanceServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000MailingSettingsMailings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailingID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MailingIDMailingID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Branch" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmailAccountEmailAddress" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Report" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NotificationTemplate" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Format" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Overridden" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000MailingSettingsMailingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000MailingSettingsMailingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyMailingID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000MailingSettingsRecipients">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContactID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Format" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bcc" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000MailingSettingsRecipientsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000MailingSettingsRecipientsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000Activities">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsCompleteIcon" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriorityIcon" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CRReminderReminderIcon" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassIcon" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Summary" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Released" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedAt" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TimeSpent" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreatedBy" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Workgroup" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Owner" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Project" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProjectTask" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelatedEntityDescription" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000ActivitiesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000ActivitiesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000Attributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attribute" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Required" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000AttributesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000AttributesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyAttribute" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000SuppliedByVendors">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vendor" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000SuppliedByVendorsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000SuppliedByVendorsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyVendor" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccountRef" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoFinancialSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Terms" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnableCurrencyOverride" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrRateType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnableRateOverride" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoFinancialSettingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoFinancialSettingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoVendorProperties">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LandedCostVendor" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorIsTaxAgency" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorIsLaborUnion" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="_1099Vendor" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="_1099Box" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ForeignEntity" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="FATCA" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="StaffMemberInServiceManagement" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoVendorPropertiesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoVendorPropertiesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoRetainageSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplyRetainage" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="RetainagePercent" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoRetainageSettingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoRetainageSettingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GLAccounts">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CashDiscountAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CashDiscountSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrepaymentAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrepaymentSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="POAccrualAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="POAccrualSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReclassificationAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReclassificationSubaccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GLAccountsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GLAccountsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000TaxAgencySettingsDefaultTaxAccounts">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxPayableAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxPayableSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxClaimableAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxClaimableSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxExpenseAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxExpenseSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000TaxAgencySettingsDefaultTaxAccountsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000TaxAgencySettingsDefaultTaxAccountsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000TaxAgencySettingsPendingVATSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VATRecognitionMethod" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="InputTaxEntryRefNbr" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="OutputTaxEntryRefNbr" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxInvoiceNumbering" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000TaxAgencySettingsPendingVATSettingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000TaxAgencySettingsPendingVATSettingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000TaxAgencySettingsTaxReportSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultTaxPeriodType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefineTaxPeriodByEndDateOfFinancialPeriod" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateClosedTaxPeriods" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AutomaticallyGenerateTaxBill" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxReportRounding" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxReportPrecision" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="UseCurrencyPrecision" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000TaxAgencySettingsTaxReportSettingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000TaxAgencySettingsTaxReportSettingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000SpecifyNewID">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000SpecifyNewIDServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000SpecifyNewIDServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsDefaultPaymentSettingsGeneralInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayToVendor" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PayByLine" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000PaymentSettingsDefaultPaymentSettingsGeneralInfoServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PaymentSettingsDefaultPaymentSettingsGeneralInfoServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoVendorSummary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locale" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocaleLocaleNameInLocaleLanguage" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:AP303000GeneralInfoVendorSummaryServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000GeneralInfoVendorSummaryServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000PrimaryKey">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="tns:Value" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AP303000Clear">
+        <s:complexType />
+      </s:element>
+      <s:element name="AP303000ClearResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AP303000GetProcessStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="AP303000GetProcessStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProcessStatusResult" type="tns:ProcessResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AP303000GetSchema">
+        <s:complexType />
+      </s:element>
+      <s:element name="AP303000GetSchemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSchemaResult" type="tns:AP303000Content" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AP303000SetSchema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schema" type="tns:AP303000Content" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AP303000SetSchemaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AP303000Export">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="commands" type="tns:ArrayOfCommand" />
+            <s:element minOccurs="0" maxOccurs="1" name="filters" type="tns:ArrayOfFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="topCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeHeaders" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakOnError" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AP303000ExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExportResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AP303000Import">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="commands" type="tns:ArrayOfCommand" />
+            <s:element minOccurs="0" maxOccurs="1" name="filters" type="tns:ArrayOfFilter" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="includedHeaders" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakOnError" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakOnIncorrectTarget" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AP303000ImportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportResult" type="tns:AP303000ArrayOfImportResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AP303000ImportResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Processed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Keys" type="tns:AP303000PrimaryKey" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AP303000ArrayOfImportResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ImportResult" nillable="true" type="tns:AP303000ImportResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AP303000Submit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="commands" type="tns:ArrayOfCommand" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AP303000ArrayOfContent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Content" nillable="true" type="tns:AP303000Content" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AP303000SubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitResult" type="tns:AP303000ArrayOfContent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IN202500Content">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Actions" type="tns:IN202500Actions" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockItemSummary" type="tns:IN202500StockItemSummary" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralSettingsItemDefaults" type="tns:IN202500GeneralSettingsItemDefaults" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralSettingsWarehouseDefaults" type="tns:IN202500GeneralSettingsWarehouseDefaults" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralSettingsUnitOfMeasure" type="tns:IN202500GeneralSettingsUnitOfMeasure" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralSettingsPhysicalInventory" type="tns:IN202500GeneralSettingsPhysicalInventory" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceCostInfoPriceManagement" type="tns:IN202500PriceCostInfoPriceManagement" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceCostInfoStandardCost" type="tns:IN202500PriceCostInfoStandardCost" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attributes" type="tns:IN202500Attributes" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackagingDimensions" type="tns:IN202500PackagingDimensions" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackagingInternationalShipping" type="tns:IN202500PackagingInternationalShipping" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackagingShippingThresholds" type="tns:IN202500PackagingShippingThresholds" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackagingAutomaticPackaging" type="tns:IN202500PackagingAutomaticPackaging" />
+          <s:element minOccurs="0" maxOccurs="1" name="GLAccounts" type="tns:IN202500GLAccounts" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:IN202500Description" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeferralSettingsRules" type="tns:IN202500DeferralSettingsRules" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceManagementEquipmentClass" type="tns:IN202500ServiceManagementEquipmentClass" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceManagementEQUIPMENTGENERALWARRANTY" type="tns:IN202500ServiceManagementEQUIPMENTGENERALWARRANTY" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subitems" type="tns:IN202500Subitems" />
+          <s:element minOccurs="0" maxOccurs="1" name="GeneralSettingsUnitOfMeasureConversions" type="tns:IN202500GeneralSettingsUnitOfMeasureConversions" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeferralSettingsRevenueComponents" type="tns:IN202500DeferralSettingsRevenueComponents" />
+          <s:element minOccurs="0" maxOccurs="1" name="CrossReference" type="tns:IN202500CrossReference" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorDetails" type="tns:IN202500VendorDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributesAttributes" type="tns:IN202500AttributesAttributes" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributesSalesCategories" type="tns:IN202500AttributesSalesCategories" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceCostInfoCostStatistics" type="tns:IN202500PriceCostInfoCostStatistics" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarehouseDetails" type="tns:IN202500WarehouseDetails" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplenishmentInfoReplenishmentParameters" type="tns:IN202500ReplenishmentInfoReplenishmentParameters" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplenishmentInfoSubitemReplenishmentParameters" type="tns:IN202500ReplenishmentInfoSubitemReplenishmentParameters" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackagingAutomaticPackagingBoxes" type="tns:IN202500PackagingAutomaticPackagingBoxes" />
+          <s:element minOccurs="0" maxOccurs="1" name="RestrictionGroups" type="tns:IN202500RestrictionGroups" />
+          <s:element minOccurs="0" maxOccurs="1" name="SyncStatus" type="tns:IN202500SyncStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubitemsSubItem" type="tns:IN202500SubitemsSubItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecifyNewID" type="tns:IN202500SpecifyNewID" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceCostInfoCostStatisticsRulesRUTAndRUTSettings" type="tns:IN202500PriceCostInfoCostStatisticsRulesRUTAndRUTSettings" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceCostInfoCostStatisticsRules" type="tns:IN202500PriceCostInfoCostStatisticsRules" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceManagement" type="tns:IN202500ServiceManagement" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500Actions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CancelCloseToList" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveCloseToList" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Save" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cancel" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Insert" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="CopyDocumentEdit" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="PasteDocumentEdit" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveTemplateEdit" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Delete" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="First" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Prev" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Next" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="Last" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeID" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateCostAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewRestrictionGroupsAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChangeIDAction" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SummaryInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllocationDetailsInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionSummaryInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionDetailsInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionHistoryInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesPricesInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorPricesInquiry" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddWarehouseDetail" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpdateReplenishment" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="GenerateSubitems" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="GenerateLotSerialNumber" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="ViewGroupDetails" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="GoToSalesforce" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SyncSalesforce" type="tns:Action" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveLoc" type="tns:Action" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500StockItemSummary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemStatus" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductWorkgroup" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductManager" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChkEquipmentManagement" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddPopUpNote" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PopUpNoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500StockItemSummaryServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500StockItemSummaryServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyInventoryID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="EveryInventoryID" type="tns:EveryValue" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsItemDefaults">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsAKit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ValuationMethod" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TaxCategory" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PostingClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LotSerialClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AutoIncrementalValue" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CountryOfOrigin" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500GeneralSettingsItemDefaultsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsItemDefaultsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsWarehouseDefaults">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultWarehouse" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultIssueFrom" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultReceiptTo" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultSubitem" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="UseOnEntry" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500GeneralSettingsWarehouseDefaultsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsWarehouseDefaultsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsUnitOfMeasure">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BaseUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DivisibleUnitDecimalBaseUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DivisibleUnitDecimalSalesUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DivisibleUnitDecimalPurchaseUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="WeightItem" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500GeneralSettingsUnitOfMeasureServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsUnitOfMeasureServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsPhysicalInventory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PICycle" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ABCCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="FixedABCCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MovementClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="FixedMovementClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500GeneralSettingsPhysicalInventoryServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsPhysicalInventoryServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoPriceManagement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceWorkgroup" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceManager" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubjectToCommission" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinMarkup" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Markup" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MSRP" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultPrice" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PriceCostInfoPriceManagementServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoPriceManagementServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoStandardCost">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PendingCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PendingCostDate" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrentCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="EffectiveDate" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PriceCostInfoStandardCostServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoStandardCostServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500Attributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500AttributesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500AttributesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingDimensions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Weight" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="WeightUOM" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Volume" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VolumeUOM" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PackagingDimensionsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingDimensionsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingInternationalShipping">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TariffCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PackagingInternationalShippingServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingInternationalShippingServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingShippingThresholds">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UndershipThreshold" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="OvershipThreshold" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PackagingShippingThresholdsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingShippingThresholdsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingAutomaticPackaging">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackagingOption" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackSeparately" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PackagingAutomaticPackagingServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingAutomaticPackagingServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GLAccounts">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventorySub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReasonCodeSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="COGSSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="StandardCostVarianceAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="StandardCostVarianceSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="StandardCostRevaluationAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="StandardCostRevaluationSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="POAccrualAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="POAccrualSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchasePriceVarianceAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchasePriceVarianceSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LandedCostVarianceAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LandedCostVarianceSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeferralAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeferralSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500GLAccountsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GLAccountsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500Description">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500DescriptionServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500DescriptionServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500DeferralSettingsRules">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeferralCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultTerm" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultTermUOM" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="UseComponentSubaccounts" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalPercentage" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500DeferralSettingsRulesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500DeferralSettingsRulesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ServiceManagementEquipmentClass">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EquipmentClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Manufacturer" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManufacturerModel" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="EquipmentType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MemShowComponent" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500ServiceManagementEquipmentClassServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ServiceManagementEquipmentClassServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ServiceManagementEQUIPMENTGENERALWARRANTY">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyWarranty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyWarrantyType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorWarranty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorWarrantyType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500ServiceManagementEQUIPMENTGENERALWARRANTYServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ServiceManagementEQUIPMENTGENERALWARRANTYServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500Subitems">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SegmentID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500SubitemsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500SubitemsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeySegmentID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeyValue" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsUnitOfMeasureConversions">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FromUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MultiplyDivide" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConversionFactor" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ToUnitSampleToUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceAdjustmentMultiplier" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500GeneralSettingsUnitOfMeasureConversionsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500GeneralSettingsUnitOfMeasureConversionsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyFromUnit" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500DeferralSettingsRevenueComponents">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SalesSub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="UOM" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeferralCode" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultTerm" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultTermUOM" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AllocationMethod" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="FixedAmount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Percentage" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500DeferralSettingsRevenueComponentsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500DeferralSettingsRevenueComponentsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500CrossReference">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subitem" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlternateType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorCustomer" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AlternateID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="UOM" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500CrossReferenceServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500CrossReferenceServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeySubitem" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeyAlternateType" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeyVendorCustomer" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeyAlternateID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500VendorDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Default" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Location" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Warehouse" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subitem" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseUnit" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorInventoryID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LeadTimeDays" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Override" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddLeadTimeDays" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinOrderFreqDays" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinOrderQty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxOrderQty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LotSize" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="EOQ" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastVendorPrice" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrepaymentPercent" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500VendorDetailsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500VendorDetailsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500AttributesAttributes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attribute" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Required" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500AttributesAttributesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500AttributesAttributesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyAttribute" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500AttributesSalesCategories">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500AttributesSalesCategoriesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500AttributesSalesCategoriesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyCategoryID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoCostStatistics">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AverageCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MinCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PriceCostInfoCostStatisticsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoCostStatisticsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500WarehouseDetails">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Default" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Warehouse" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="WarehouseWarehouseID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultReceiptTo" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultIssueFrom" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryAccount" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventorySub" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="OverrideProductManager" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductWorkgroup" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductManager" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="OverrideStdCost" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PriceOverride" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="QtyOnHand" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="OverridePreferredVendor" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PreferredVendor" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="OverrideReplenishmentSettings" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seasonality" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplenishmentSource" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplenishmentWarehouse" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Override" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceLevel" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastForecastDate" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DailyDemandForecast" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DailyDemandForecastErrorSTDEV" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500WarehouseDetailsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500WarehouseDetailsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyWarehouse" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ReplenishmentInfoReplenishmentParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplClass" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Seasonality" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Source" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Method" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplenishmentWarehouse" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxShelfLifeDays" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LaunchDate" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminationDate" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceLevel" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SafetyStock" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReorderPoint" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxQty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransferERQ" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="DemandForecastModel" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ForecastPeriodType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PeriodsToAnalyze" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500ReplenishmentInfoReplenishmentParametersServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ReplenishmentInfoReplenishmentParametersServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ReplenishmentInfoSubitemReplenishmentParameters">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReplenishmentClassID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Subitem" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SafetyStock" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReorderPoint" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxQty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransferERQ" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500ReplenishmentInfoSubitemReplenishmentParametersServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ReplenishmentInfoSubitemReplenishmentParametersServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeySubitem" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingAutomaticPackagingBoxes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BoxID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="UOM" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Qty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxWeight" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxVolume" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaxQty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PackagingAutomaticPackagingBoxesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PackagingAutomaticPackagingBoxesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyBoxID" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500RestrictionGroups">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Included" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecificType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500RestrictionGroupsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500RestrictionGroupsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500SyncStatus">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataProvider" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtRef" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Operation" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="LatestAttempt" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttemptCounter" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImportScenario" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExportScenario" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500SyncStatusServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500SyncStatusServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500SubitemsSubItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500SubitemsSubItemServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500SubitemsSubItemServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="KeyValue" type="tns:Key" />
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500SpecifyNewID">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500SpecifyNewIDServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500SpecifyNewIDServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoCostStatisticsRulesRUTAndRUTSettings">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeRUTROTType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeRUTROTItemType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeOfWork" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PriceCostInfoCostStatisticsRulesRUTAndRUTSettingsServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoCostStatisticsRulesRUTAndRUTSettingsServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoCostStatisticsRules">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AddPopUpNote" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="PopUpNoteText" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500PriceCostInfoCostStatisticsRulesServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PriceCostInfoCostStatisticsRulesServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attachment" type="tns:Attachment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ServiceManagement">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ComponentID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Active" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Qty" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="Descr" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequireSerial" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyWarrantyValue" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="CpnyWarrantyType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorWarrantyValue" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorWarrantyType" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="VendorID" type="tns:Field" />
+          <s:element minOccurs="0" maxOccurs="1" name="ServiceCommands" type="tns:IN202500ServiceManagementServiceCommands" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ServiceManagementServiceCommands">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NewRow" type="tns:NewRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="RowNumber" type="tns:RowNumber" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeleteRow" type="tns:DeleteRow" />
+          <s:element minOccurs="0" maxOccurs="1" name="DialogAnswer" type="tns:Answer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500PrimaryKey">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="InventoryID" type="tns:Value" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IN202500Clear">
+        <s:complexType />
+      </s:element>
+      <s:element name="IN202500ClearResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IN202500GetProcessStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="IN202500GetProcessStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProcessStatusResult" type="tns:ProcessResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IN202500GetSchema">
+        <s:complexType />
+      </s:element>
+      <s:element name="IN202500GetSchemaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSchemaResult" type="tns:IN202500Content" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IN202500SetSchema">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="schema" type="tns:IN202500Content" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IN202500SetSchemaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="IN202500Export">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="commands" type="tns:ArrayOfCommand" />
+            <s:element minOccurs="0" maxOccurs="1" name="filters" type="tns:ArrayOfFilter" />
+            <s:element minOccurs="1" maxOccurs="1" name="topCount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="includeHeaders" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakOnError" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IN202500ExportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExportResult" type="tns:ArrayOfArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IN202500Import">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="commands" type="tns:ArrayOfCommand" />
+            <s:element minOccurs="0" maxOccurs="1" name="filters" type="tns:ArrayOfFilter" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="includedHeaders" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakOnError" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="breakOnIncorrectTarget" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IN202500ImportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ImportResult" type="tns:IN202500ArrayOfImportResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IN202500ImportResult">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Processed" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Keys" type="tns:IN202500PrimaryKey" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="IN202500ArrayOfImportResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ImportResult" nillable="true" type="tns:IN202500ImportResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IN202500Submit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="commands" type="tns:ArrayOfCommand" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IN202500ArrayOfContent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Content" nillable="true" type="tns:IN202500Content" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="IN202500SubmitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SubmitResult" type="tns:IN202500ArrayOfContent" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetScenarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScenario" />
+  </wsdl:message>
+  <wsdl:message name="GetScenarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScenarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapIn">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="LogoutSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetBusinessDateSoapIn">
+    <wsdl:part name="parameters" element="tns:SetBusinessDate" />
+  </wsdl:message>
+  <wsdl:message name="SetBusinessDateSoapOut">
+    <wsdl:part name="parameters" element="tns:SetBusinessDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetLocaleNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SetLocaleName" />
+  </wsdl:message>
+  <wsdl:message name="SetLocaleNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SetLocaleNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetSchemaModeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetSchemaMode" />
+  </wsdl:message>
+  <wsdl:message name="SetSchemaModeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetSchemaModeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AP303000ClearSoapIn">
+    <wsdl:part name="parameters" element="tns:AP303000Clear" />
+  </wsdl:message>
+  <wsdl:message name="AP303000ClearSoapOut">
+    <wsdl:part name="parameters" element="tns:AP303000ClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="AP303000GetProcessStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:AP303000GetProcessStatus" />
+  </wsdl:message>
+  <wsdl:message name="AP303000GetProcessStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:AP303000GetProcessStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="AP303000GetSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:AP303000GetSchema" />
+  </wsdl:message>
+  <wsdl:message name="AP303000GetSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:AP303000GetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AP303000SetSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:AP303000SetSchema" />
+  </wsdl:message>
+  <wsdl:message name="AP303000SetSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:AP303000SetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="AP303000ExportSoapIn">
+    <wsdl:part name="parameters" element="tns:AP303000Export" />
+  </wsdl:message>
+  <wsdl:message name="AP303000ExportSoapOut">
+    <wsdl:part name="parameters" element="tns:AP303000ExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="AP303000ImportSoapIn">
+    <wsdl:part name="parameters" element="tns:AP303000Import" />
+  </wsdl:message>
+  <wsdl:message name="AP303000ImportSoapOut">
+    <wsdl:part name="parameters" element="tns:AP303000ImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="AP303000SubmitSoapIn">
+    <wsdl:part name="parameters" element="tns:AP303000Submit" />
+  </wsdl:message>
+  <wsdl:message name="AP303000SubmitSoapOut">
+    <wsdl:part name="parameters" element="tns:AP303000SubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IN202500ClearSoapIn">
+    <wsdl:part name="parameters" element="tns:IN202500Clear" />
+  </wsdl:message>
+  <wsdl:message name="IN202500ClearSoapOut">
+    <wsdl:part name="parameters" element="tns:IN202500ClearResponse" />
+  </wsdl:message>
+  <wsdl:message name="IN202500GetProcessStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:IN202500GetProcessStatus" />
+  </wsdl:message>
+  <wsdl:message name="IN202500GetProcessStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:IN202500GetProcessStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IN202500GetSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:IN202500GetSchema" />
+  </wsdl:message>
+  <wsdl:message name="IN202500GetSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:IN202500GetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IN202500SetSchemaSoapIn">
+    <wsdl:part name="parameters" element="tns:IN202500SetSchema" />
+  </wsdl:message>
+  <wsdl:message name="IN202500SetSchemaSoapOut">
+    <wsdl:part name="parameters" element="tns:IN202500SetSchemaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IN202500ExportSoapIn">
+    <wsdl:part name="parameters" element="tns:IN202500Export" />
+  </wsdl:message>
+  <wsdl:message name="IN202500ExportSoapOut">
+    <wsdl:part name="parameters" element="tns:IN202500ExportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IN202500ImportSoapIn">
+    <wsdl:part name="parameters" element="tns:IN202500Import" />
+  </wsdl:message>
+  <wsdl:message name="IN202500ImportSoapOut">
+    <wsdl:part name="parameters" element="tns:IN202500ImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IN202500SubmitSoapIn">
+    <wsdl:part name="parameters" element="tns:IN202500Submit" />
+  </wsdl:message>
+  <wsdl:message name="IN202500SubmitSoapOut">
+    <wsdl:part name="parameters" element="tns:IN202500SubmitResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ScreenSoap">
+    <wsdl:operation name="GetScenario">
+      <wsdl:input message="tns:GetScenarioSoapIn" />
+      <wsdl:output message="tns:GetScenarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input message="tns:LogoutSoapIn" />
+      <wsdl:output message="tns:LogoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetBusinessDate">
+      <wsdl:input message="tns:SetBusinessDateSoapIn" />
+      <wsdl:output message="tns:SetBusinessDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetLocaleName">
+      <wsdl:input message="tns:SetLocaleNameSoapIn" />
+      <wsdl:output message="tns:SetLocaleNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetSchemaMode">
+      <wsdl:input message="tns:SetSchemaModeSoapIn" />
+      <wsdl:output message="tns:SetSchemaModeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Clear">
+      <wsdl:input message="tns:AP303000ClearSoapIn" />
+      <wsdl:output message="tns:AP303000ClearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AP303000GetProcessStatus">
+      <wsdl:input message="tns:AP303000GetProcessStatusSoapIn" />
+      <wsdl:output message="tns:AP303000GetProcessStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AP303000GetSchema">
+      <wsdl:input message="tns:AP303000GetSchemaSoapIn" />
+      <wsdl:output message="tns:AP303000GetSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AP303000SetSchema">
+      <wsdl:input message="tns:AP303000SetSchemaSoapIn" />
+      <wsdl:output message="tns:AP303000SetSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Import">
+      <wsdl:input message="tns:AP303000ImportSoapIn" />
+      <wsdl:output message="tns:AP303000ImportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Export">
+      <wsdl:input message="tns:AP303000ExportSoapIn" />
+      <wsdl:output message="tns:AP303000ExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Submit">
+      <wsdl:input message="tns:AP303000SubmitSoapIn" />
+      <wsdl:output message="tns:AP303000SubmitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Clear">
+      <wsdl:input message="tns:IN202500ClearSoapIn" />
+      <wsdl:output message="tns:IN202500ClearSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IN202500GetProcessStatus">
+      <wsdl:input message="tns:IN202500GetProcessStatusSoapIn" />
+      <wsdl:output message="tns:IN202500GetProcessStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IN202500GetSchema">
+      <wsdl:input message="tns:IN202500GetSchemaSoapIn" />
+      <wsdl:output message="tns:IN202500GetSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IN202500SetSchema">
+      <wsdl:input message="tns:IN202500SetSchemaSoapIn" />
+      <wsdl:output message="tns:IN202500SetSchemaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Import">
+      <wsdl:input message="tns:IN202500ImportSoapIn" />
+      <wsdl:output message="tns:IN202500ImportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Export">
+      <wsdl:input message="tns:IN202500ExportSoapIn" />
+      <wsdl:output message="tns:IN202500ExportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Submit">
+      <wsdl:input message="tns:IN202500SubmitSoapIn" />
+      <wsdl:output message="tns:IN202500SubmitSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ScreenSoap" type="tns:ScreenSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetScenario">
+      <soap:operation soapAction="http://www.acumatica.com/generic/GetScenario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://www.acumatica.com/generic/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://www.acumatica.com/generic/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetBusinessDate">
+      <soap:operation soapAction="http://www.acumatica.com/generic/SetBusinessDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetLocaleName">
+      <soap:operation soapAction="http://www.acumatica.com/generic/SetLocaleName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetSchemaMode">
+      <soap:operation soapAction="http://www.acumatica.com/generic/SetSchemaMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Clear">
+      <soap:operation soapAction="http://www.acumatica.com/generic/AP303000/Clear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AP303000GetProcessStatus">
+      <soap:operation soapAction="http://www.acumatica.com/generic/AP303000/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AP303000GetSchema">
+      <soap:operation soapAction="http://www.acumatica.com/generic/AP303000/GetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AP303000SetSchema">
+      <soap:operation soapAction="http://www.acumatica.com/generic/AP303000/SetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Export">
+      <soap:operation soapAction="http://www.acumatica.com/generic/AP303000/Export" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Import">
+      <soap:operation soapAction="http://www.acumatica.com/generic/AP303000/Import" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AP303000Submit">
+      <soap:operation soapAction="http://www.acumatica.com/generic/AP303000/Submit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Clear">
+      <soap:operation soapAction="http://www.acumatica.com/generic/IN202500/Clear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IN202500GetProcessStatus">
+      <soap:operation soapAction="http://www.acumatica.com/generic/IN202500/GetProcessStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IN202500GetSchema">
+      <soap:operation soapAction="http://www.acumatica.com/generic/IN202500/GetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IN202500SetSchema">
+      <soap:operation soapAction="http://www.acumatica.com/generic/IN202500/SetSchema" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Export">
+      <soap:operation soapAction="http://www.acumatica.com/generic/IN202500/Export" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Import">
+      <soap:operation soapAction="http://www.acumatica.com/generic/IN202500/Import" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IN202500Submit">
+      <soap:operation soapAction="http://www.acumatica.com/generic/IN202500/Submit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Screen">
+    <wsdl:port name="ScreenSoap" binding="tns:ScreenSoap">
+      <soap:address location="https://universalleaf.acumatica.com/Soap/ADDONSYNC.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
