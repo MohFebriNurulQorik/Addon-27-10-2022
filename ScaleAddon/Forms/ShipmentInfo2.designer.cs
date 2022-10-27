@@ -98,7 +98,6 @@
             this.tbLisencePlate = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.tbLogisticService = new System.Windows.Forms.TextBox();
-            this.btnToogle = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.dtpShippingDate = new System.Windows.Forms.DateTimePicker();
             this.label30 = new System.Windows.Forms.Label();
@@ -118,7 +117,6 @@
             this.btnScaleOverride = new System.Windows.Forms.Button();
             this.btnScale = new System.Windows.Forms.Button();
             this.btnScaleComm = new System.Windows.Forms.Button();
-            this.cbLot = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
             this.tbCustOrderNo = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -786,7 +784,7 @@
             // tbLot
             // 
             this.tbLot.BackColor = System.Drawing.SystemColors.Window;
-            this.tbLot.Location = new System.Drawing.Point(156, 430);
+            this.tbLot.Location = new System.Drawing.Point(154, 436);
             this.tbLot.Margin = new System.Windows.Forms.Padding(4);
             this.tbLot.Name = "tbLot";
             this.tbLot.Size = new System.Drawing.Size(193, 22);
@@ -964,17 +962,6 @@
             this.tbLogisticService.Size = new System.Drawing.Size(239, 22);
             this.tbLogisticService.TabIndex = 2;
             this.tbLogisticService.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbLogisticService_KeyPress);
-            // 
-            // btnToogle
-            // 
-            this.btnToogle.Image = global::ScaleAddon.Properties.Resources.icons8_search_161;
-            this.btnToogle.Location = new System.Drawing.Point(357, 430);
-            this.btnToogle.Margin = new System.Windows.Forms.Padding(4);
-            this.btnToogle.Name = "btnToogle";
-            this.btnToogle.Size = new System.Drawing.Size(37, 28);
-            this.btnToogle.TabIndex = 156;
-            this.btnToogle.UseVisualStyleBackColor = true;
-            this.btnToogle.Click += new System.EventHandler(this.btnToogle_Click);
             // 
             // label25
             // 
@@ -1179,17 +1166,6 @@
             this.btnScaleComm.UseVisualStyleBackColor = true;
             this.btnScaleComm.Click += new System.EventHandler(this.btnScaleComm_Click);
             // 
-            // cbLot
-            // 
-            this.cbLot.FormattingEnabled = true;
-            this.cbLot.Location = new System.Drawing.Point(157, 430);
-            this.cbLot.Margin = new System.Windows.Forms.Padding(4);
-            this.cbLot.Name = "cbLot";
-            this.cbLot.Size = new System.Drawing.Size(193, 24);
-            this.cbLot.TabIndex = 98;
-            this.cbLot.Visible = false;
-            this.cbLot.SelectedIndexChanged += new System.EventHandler(this.cbLot_SelectedIndexChanged);
-            // 
             // label33
             // 
             this.label33.AutoSize = true;
@@ -1266,9 +1242,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dtpShippingDate);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.btnToogle);
             this.Controls.Add(this.tbLot);
-            this.Controls.Add(this.cbLot);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.tbLisencePlate);
             this.Controls.Add(this.label24);
@@ -1390,7 +1364,6 @@
         internal System.Windows.Forms.Button btnPrintWL;
         internal System.Windows.Forms.Button btnPrintSJ;
         private System.Windows.Forms.TextBox tbLot;
-        private System.Windows.Forms.Button btnToogle;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.DateTimePicker dtpShippingDate;
         private System.Windows.Forms.Label label38;
@@ -1416,7 +1389,6 @@
         internal System.Windows.Forms.Button btnScaleComm;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox tbEntryOldWeightNetto;
-        private System.Windows.Forms.ComboBox cbLot;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox tbCustOrderNo;
         private System.Windows.Forms.Label label34;

@@ -93,7 +93,7 @@ namespace ScaleAddon.Controls
                 var configuration = LogIn(authApi, AcumaticaCred.AcumaticaSiteURL, AcumaticaCred.AcumaticaUser, AcumaticaCred.AcumaticaPassword, AcumaticaCred.AcumaticaTenant, AcumaticaCred.AcumaticaBranch, AcumaticaCred.AcumaticaLocale);
                 var stockItemApi = new StockItemApi(configuration);
                 var stockItems = stockItemApi.GetList(select: "InventoryID,Description,ItemStatus,LastModified", filter: "ItemClass eq 'TOBACCO'");
-
+                //Console.WriteLine(stockItems);
                 //insert vendor attribute
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
                 {

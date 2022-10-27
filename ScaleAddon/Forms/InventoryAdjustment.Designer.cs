@@ -134,7 +134,7 @@ namespace ScaleAddon.Forms
             this.label30.Location = new System.Drawing.Point(24, 149);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(110, 17);
+            this.label30.Size = new System.Drawing.Size(105, 16);
             this.label30.TabIndex = 99;
             this.label30.Text = "Acumatica Issue";
             // 
@@ -166,7 +166,7 @@ namespace ScaleAddon.Forms
             this.label9.Location = new System.Drawing.Point(7, 131);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 17);
+            this.label9.Size = new System.Drawing.Size(83, 16);
             this.label9.TabIndex = 96;
             this.label9.Text = "Tobacco Lot";
             // 
@@ -176,7 +176,7 @@ namespace ScaleAddon.Forms
             this.label7.Location = new System.Drawing.Point(24, 117);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 17);
+            this.label7.Size = new System.Drawing.Size(100, 16);
             this.label7.TabIndex = 95;
             this.label7.Text = "Document Date";
             // 
@@ -196,7 +196,7 @@ namespace ScaleAddon.Forms
             this.label3.Location = new System.Drawing.Point(437, 85);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 17);
+            this.label3.Size = new System.Drawing.Size(75, 16);
             this.label3.TabIndex = 93;
             this.label3.Text = "Doc. Status";
             // 
@@ -228,7 +228,7 @@ namespace ScaleAddon.Forms
             this.label1.Location = new System.Drawing.Point(24, 85);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 17);
+            this.label1.Size = new System.Drawing.Size(119, 16);
             this.label1.TabIndex = 90;
             this.label1.Text = "Document Number";
             // 
@@ -311,7 +311,7 @@ namespace ScaleAddon.Forms
             this.label8.Location = new System.Drawing.Point(437, 116);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(81, 17);
+            this.label8.Size = new System.Drawing.Size(77, 16);
             this.label8.TabIndex = 102;
             this.label8.Text = "Warehouse";
             // 
@@ -331,7 +331,7 @@ namespace ScaleAddon.Forms
             this.label2.Location = new System.Drawing.Point(436, 149);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 17);
+            this.label2.Size = new System.Drawing.Size(120, 16);
             this.label2.TabIndex = 104;
             this.label2.Text = "Acumatica Receipt";
             // 
@@ -387,7 +387,7 @@ namespace ScaleAddon.Forms
             this.label38.Location = new System.Drawing.Point(620, 11);
             this.label38.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(64, 17);
+            this.label38.Size = new System.Drawing.Size(59, 16);
             this.label38.TabIndex = 116;
             this.label38.Text = "Total Lot";
             // 
@@ -424,7 +424,7 @@ namespace ScaleAddon.Forms
             this.label5.Location = new System.Drawing.Point(801, 11);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 17);
+            this.label5.Size = new System.Drawing.Size(59, 16);
             this.label5.TabIndex = 87;
             this.label5.Text = "Total KG";
             // 
@@ -474,7 +474,7 @@ namespace ScaleAddon.Forms
             this.checkHold.Location = new System.Drawing.Point(779, 82);
             this.checkHold.Margin = new System.Windows.Forms.Padding(4);
             this.checkHold.Name = "checkHold";
-            this.checkHold.Size = new System.Drawing.Size(59, 21);
+            this.checkHold.Size = new System.Drawing.Size(58, 20);
             this.checkHold.TabIndex = 108;
             this.checkHold.Text = "Hold";
             this.checkHold.UseVisualStyleBackColor = true;
@@ -564,7 +564,7 @@ namespace ScaleAddon.Forms
             this.label6.Location = new System.Drawing.Point(7, 18);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(114, 17);
+            this.label6.Size = new System.Drawing.Size(108, 16);
             this.label6.TabIndex = 112;
             this.label6.Text = "Type Adjustment";
             // 
@@ -573,7 +573,7 @@ namespace ScaleAddon.Forms
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(10, 48);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 21);
+            this.radioButton1.Size = new System.Drawing.Size(53, 20);
             this.radioButton1.TabIndex = 113;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Add";
@@ -584,7 +584,7 @@ namespace ScaleAddon.Forms
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(10, 75);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(53, 21);
+            this.radioButton2.Size = new System.Drawing.Size(51, 20);
             this.radioButton2.TabIndex = 114;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Edit";
@@ -595,7 +595,7 @@ namespace ScaleAddon.Forms
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(10, 102);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(81, 21);
+            this.radioButton3.Size = new System.Drawing.Size(80, 20);
             this.radioButton3.TabIndex = 115;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Remove";
@@ -670,7 +670,7 @@ namespace ScaleAddon.Forms
             this.label17.Location = new System.Drawing.Point(573, 104);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 17);
+            this.label17.Size = new System.Drawing.Size(57, 16);
             this.label17.TabIndex = 124;
             this.label17.Text = "Prosess";
             // 
@@ -727,7 +727,7 @@ namespace ScaleAddon.Forms
             this.label10.Location = new System.Drawing.Point(438, 104);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 17);
+            this.label10.Size = new System.Drawing.Size(88, 16);
             this.label10.TabIndex = 106;
             this.label10.Text = "Stalk Position";
             // 
@@ -760,7 +760,7 @@ namespace ScaleAddon.Forms
             this.label25.Location = new System.Drawing.Point(301, 104);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(52, 17);
+            this.label25.Size = new System.Drawing.Size(47, 16);
             this.label25.TabIndex = 112;
             this.label25.Text = "Length";
             // 
@@ -780,7 +780,7 @@ namespace ScaleAddon.Forms
             this.label23.Location = new System.Drawing.Point(153, 104);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 17);
+            this.label23.Size = new System.Drawing.Size(85, 16);
             this.label23.TabIndex = 111;
             this.label23.Text = "Fermentation";
             // 
@@ -813,7 +813,7 @@ namespace ScaleAddon.Forms
             this.label11.Location = new System.Drawing.Point(12, 104);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(41, 17);
+            this.label11.Size = new System.Drawing.Size(39, 16);
             this.label11.TabIndex = 110;
             this.label11.Text = "Color";
             // 
@@ -833,7 +833,7 @@ namespace ScaleAddon.Forms
             this.label26.Location = new System.Drawing.Point(774, 50);
             this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 17);
+            this.label26.Size = new System.Drawing.Size(36, 16);
             this.label26.TabIndex = 102;
             this.label26.Text = "Area";
             // 
@@ -843,7 +843,7 @@ namespace ScaleAddon.Forms
             this.label16.Location = new System.Drawing.Point(8, 49);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 17);
+            this.label16.Size = new System.Drawing.Size(50, 16);
             this.label16.TabIndex = 101;
             this.label16.Text = "Source";
             // 
@@ -853,7 +853,7 @@ namespace ScaleAddon.Forms
             this.label15.Location = new System.Drawing.Point(619, 48);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 17);
+            this.label15.Size = new System.Drawing.Size(45, 16);
             this.label15.TabIndex = 103;
             this.label15.Text = "Grade";
             // 
@@ -863,7 +863,7 @@ namespace ScaleAddon.Forms
             this.label14.Location = new System.Drawing.Point(462, 50);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(72, 17);
+            this.label14.Size = new System.Drawing.Size(68, 16);
             this.label14.TabIndex = 100;
             this.label14.Text = "Crop Year";
             // 
@@ -873,7 +873,7 @@ namespace ScaleAddon.Forms
             this.label13.Location = new System.Drawing.Point(313, 48);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(40, 17);
+            this.label13.Size = new System.Drawing.Size(38, 16);
             this.label13.TabIndex = 99;
             this.label13.Text = "Form";
             // 
@@ -883,7 +883,7 @@ namespace ScaleAddon.Forms
             this.label12.Location = new System.Drawing.Point(166, 50);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(45, 17);
+            this.label12.Size = new System.Drawing.Size(43, 16);
             this.label12.TabIndex = 98;
             this.label12.Text = "Stage";
             // 
@@ -1039,7 +1039,7 @@ namespace ScaleAddon.Forms
             this.label4.Location = new System.Drawing.Point(24, 182);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 17);
+            this.label4.Size = new System.Drawing.Size(122, 16);
             this.label4.TabIndex = 117;
             this.label4.Text = "Mandatory Remark";
             // 

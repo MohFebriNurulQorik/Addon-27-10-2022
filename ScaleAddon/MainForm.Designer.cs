@@ -135,7 +135,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1540, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1540, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -147,7 +147,7 @@
             this.exitToolStripMenuItem});
             this.accessToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_user_menu_male_16;
             this.accessToolStripMenuItem.Name = "accessToolStripMenuItem";
-            this.accessToolStripMenuItem.Size = new System.Drawing.Size(87, 26);
+            this.accessToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
             this.accessToolStripMenuItem.Text = "Access";
             // 
             // userProfileToolStripMenuItem
@@ -187,7 +187,7 @@
             this.tobaccoPriceToolStripMenuItem});
             this.masterDataToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_database_16;
             this.masterDataToolStripMenuItem.Name = "masterDataToolStripMenuItem";
-            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(124, 26);
+            this.masterDataToolStripMenuItem.Size = new System.Drawing.Size(124, 24);
             this.masterDataToolStripMenuItem.Text = "Master Data";
             // 
             // vendorListToolStripMenuItem
@@ -263,14 +263,14 @@
             this.purchaseInvoiceToolStripMenuItem});
             this.buyingStationToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_buy_16;
             this.buyingStationToolStripMenuItem.Name = "buyingStationToolStripMenuItem";
-            this.buyingStationToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
+            this.buyingStationToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.buyingStationToolStripMenuItem.Text = "Buying Station";
             // 
             // registrationToolStripMenuItem
             // 
             this.registrationToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_registration_16;
             this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
-            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.registrationToolStripMenuItem.Text = "Registration";
             this.registrationToolStripMenuItem.Click += new System.EventHandler(this.registrationToolStripMenuItem_Click);
             // 
@@ -278,7 +278,7 @@
             // 
             this.buyingQCToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_search_16;
             this.buyingQCToolStripMenuItem.Name = "buyingQCToolStripMenuItem";
-            this.buyingQCToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.buyingQCToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buyingQCToolStripMenuItem.Text = "Buying QC";
             this.buyingQCToolStripMenuItem.Click += new System.EventHandler(this.buyingQCToolStripMenuItem_Click);
             // 
@@ -286,7 +286,7 @@
             // 
             this.buyingProcessToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_buy_16;
             this.buyingProcessToolStripMenuItem.Name = "buyingProcessToolStripMenuItem";
-            this.buyingProcessToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.buyingProcessToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buyingProcessToolStripMenuItem.Text = "Buying Process";
             this.buyingProcessToolStripMenuItem.Click += new System.EventHandler(this.buyingProcessToolStripMenuItem_Click);
             // 
@@ -294,7 +294,7 @@
             // 
             this.purchaseInvoiceToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_invoice_16;
             this.purchaseInvoiceToolStripMenuItem.Name = "purchaseInvoiceToolStripMenuItem";
-            this.purchaseInvoiceToolStripMenuItem.Size = new System.Drawing.Size(201, 26);
+            this.purchaseInvoiceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.purchaseInvoiceToolStripMenuItem.Text = "Purchase Invoice";
             this.purchaseInvoiceToolStripMenuItem.Click += new System.EventHandler(this.purchaseInvoiceToolStripMenuItem_Click);
             // 
@@ -321,14 +321,15 @@
             this.finalPackingToolStripMenuItem});
             this.processingToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_services_16;
             this.processingToolStripMenuItem.Name = "processingToolStripMenuItem";
-            this.processingToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
+            this.processingToolStripMenuItem.Size = new System.Drawing.Size(113, 24);
             this.processingToolStripMenuItem.Text = "Processing";
             // 
             // reclassToolStripMenuItem
             // 
+            this.reclassToolStripMenuItem.Enabled = false;
             this.reclassToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_rec_16;
             this.reclassToolStripMenuItem.Name = "reclassToolStripMenuItem";
-            this.reclassToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.reclassToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.reclassToolStripMenuItem.Text = "Direct Reclass";
             this.reclassToolStripMenuItem.Click += new System.EventHandler(this.reclassToolStripMenuItem_Click);
             // 
@@ -336,14 +337,14 @@
             // 
             this.reclassProcessToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_rec_16;
             this.reclassProcessToolStripMenuItem.Name = "reclassProcessToolStripMenuItem";
-            this.reclassProcessToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.reclassProcessToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.reclassProcessToolStripMenuItem.Text = "Regrade";
             this.reclassProcessToolStripMenuItem.Click += new System.EventHandler(this.reclassProcessToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(214, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(221, 6);
             // 
             // birToolStripMenuItem
             // 
@@ -352,7 +353,7 @@
             this.birOUTToolStripMenuItem});
             this.birToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.birToolStripMenuItem.Name = "birToolStripMenuItem";
-            this.birToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.birToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.birToolStripMenuItem.Text = "Bir-Bir";
             // 
             // birINToolStripMenuItem
@@ -378,7 +379,7 @@
             this.strippedOUTToolStripMenuItem});
             this.strippedToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.strippedToolStripMenuItem.Name = "strippedToolStripMenuItem";
-            this.strippedToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.strippedToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.strippedToolStripMenuItem.Text = "Stripping";
             // 
             // strippedINToolStripMenuItem
@@ -404,7 +405,7 @@
             this.buttedOUTToolStripMenuItem});
             this.buttedToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.buttedToolStripMenuItem.Name = "buttedToolStripMenuItem";
-            this.buttedToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.buttedToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buttedToolStripMenuItem.Text = "Butting";
             // 
             // buttedINToolStripMenuItem
@@ -430,7 +431,7 @@
             this.loosingOUTToolStripMenuItem});
             this.loosingToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.loosingToolStripMenuItem.Name = "loosingToolStripMenuItem";
-            this.loosingToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.loosingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.loosingToolStripMenuItem.Text = "Loosing";
             // 
             // loosingINToolStripMenuItem
@@ -452,7 +453,7 @@
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(214, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(221, 6);
             // 
             // fermentationToolStripMenuItem
             // 
@@ -461,7 +462,7 @@
             this.fermentationOUTToolStripMenuItem});
             this.fermentationToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.fermentationToolStripMenuItem.Name = "fermentationToolStripMenuItem";
-            this.fermentationToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.fermentationToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.fermentationToolStripMenuItem.Text = "Fermentation";
             // 
             // fermentationINToolStripMenuItem
@@ -483,7 +484,7 @@
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(214, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(221, 6);
             // 
             // pras1ToolStripMenuItem
             // 
@@ -492,7 +493,7 @@
             this.pras1OUTToolStripMenuItem});
             this.pras1ToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.pras1ToolStripMenuItem.Name = "pras1ToolStripMenuItem";
-            this.pras1ToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.pras1ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pras1ToolStripMenuItem.Text = "Pras 1";
             // 
             // pras1INToolStripMenuItem
@@ -518,7 +519,7 @@
             this.pras2OUTToolStripMenuItem});
             this.pras2ToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.pras2ToolStripMenuItem.Name = "pras2ToolStripMenuItem";
-            this.pras2ToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.pras2ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.pras2ToolStripMenuItem.Text = "Pras 2";
             // 
             // pras2INToolStripMenuItem
@@ -544,7 +545,7 @@
             this.sortasiOUTToolStripMenuItem});
             this.sortasiToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.sortasiToolStripMenuItem.Name = "sortasiToolStripMenuItem";
-            this.sortasiToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.sortasiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sortasiToolStripMenuItem.Text = "Sortasi";
             // 
             // sortasiINToolStripMenuItem
@@ -570,7 +571,7 @@
             this.finalSortasiOUTToolStripMenuItem});
             this.finalSortasiToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.finalSortasiToolStripMenuItem.Name = "finalSortasiToolStripMenuItem";
-            this.finalSortasiToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.finalSortasiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.finalSortasiToolStripMenuItem.Text = "Final Sortasi";
             // 
             // finalSortasiINToolStripMenuItem
@@ -596,7 +597,7 @@
             this.sortasiPackingOUTToolStripMenuItem});
             this.sortasiPackingToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.sortasiPackingToolStripMenuItem.Name = "sortasiPackingToolStripMenuItem";
-            this.sortasiPackingToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.sortasiPackingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sortasiPackingToolStripMenuItem.Text = "Sortasi Packing";
             // 
             // sortasiPackingINToolStripMenuItem
@@ -618,7 +619,7 @@
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(214, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(221, 6);
             // 
             // temporaryPackingToolStripMenuItem
             // 
@@ -629,7 +630,7 @@
             this.directTemporaryPackingToolStripMenuItem});
             this.temporaryPackingToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.temporaryPackingToolStripMenuItem.Name = "temporaryPackingToolStripMenuItem";
-            this.temporaryPackingToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.temporaryPackingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.temporaryPackingToolStripMenuItem.Text = "Temporary Packing";
             // 
             // temporaryPackingINToolStripMenuItem
@@ -670,7 +671,7 @@
             this.directPackingToolStripMenuItem});
             this.finalPackingToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_box_gear_16;
             this.finalPackingToolStripMenuItem.Name = "finalPackingToolStripMenuItem";
-            this.finalPackingToolStripMenuItem.Size = new System.Drawing.Size(217, 26);
+            this.finalPackingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.finalPackingToolStripMenuItem.Text = "Final Packing";
             // 
             // finalPackingINToolStripMenuItem
@@ -718,7 +719,7 @@
             this.shipmentInfoToolStripMenuItem});
             this.inventoryStockToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_depot_16;
             this.inventoryStockToolStripMenuItem.Name = "inventoryStockToolStripMenuItem";
-            this.inventoryStockToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.inventoryStockToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
             this.inventoryStockToolStripMenuItem.Text = "Inventory Stock";
             // 
             // tobaccoStockToolStripMenuItem
@@ -810,7 +811,7 @@
             this.scaleCommunicationToolStripMenuItem1});
             this.settingsToolStripMenuItem.Image = global::ScaleAddon.Properties.Resources.icons8_settings_16;
             this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
-            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(96, 26);
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.settingsToolStripMenuItem.Text = "Settings";
             // 
             // userDataToolStripMenuItem
@@ -857,7 +858,7 @@
             // 
             this.scaleCalibrationToolStripMenuItem1.Image = global::ScaleAddon.Properties.Resources.icons8_scales_161;
             this.scaleCalibrationToolStripMenuItem1.Name = "scaleCalibrationToolStripMenuItem1";
-            this.scaleCalibrationToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
+            this.scaleCalibrationToolStripMenuItem1.Size = new System.Drawing.Size(155, 24);
             this.scaleCalibrationToolStripMenuItem1.Text = "Scale Calibration";
             this.scaleCalibrationToolStripMenuItem1.Click += new System.EventHandler(this.scaleCalibrationToolStripMenuItem1_Click);
             // 
@@ -882,11 +883,12 @@
             // MainPanel
             // 
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(0, 30);
+            this.MainPanel.Location = new System.Drawing.Point(0, 28);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(4);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(1540, 758);
+            this.MainPanel.Size = new System.Drawing.Size(1540, 760);
             this.MainPanel.TabIndex = 2;
+            this.MainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MainPanel_Paint);
             // 
             // MainForm
             // 

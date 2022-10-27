@@ -150,6 +150,8 @@
             this.btnToogle = new System.Windows.Forms.Button();
             this.btnGenerateLotQC = new System.Windows.Forms.Button();
             this.tbQCA = new System.Windows.Forms.TextBox();
+            this.ExternalLot = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupDetail.SuspendLayout();
@@ -161,6 +163,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.ExternalLot);
             this.panel1.Controls.Add(this.SaveImport);
             this.panel1.Controls.Add(this.unsyncing);
             this.panel1.Controls.Add(this.cbosheet);
@@ -1651,6 +1655,31 @@
             this.tbQCA.Text = "QC NOT AVAILABLE";
             this.tbQCA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // ExternalLot
+            // 
+            this.ExternalLot.AutoSize = true;
+            this.ExternalLot.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ExternalLot.Location = new System.Drawing.Point(286, 8);
+            this.ExternalLot.Margin = new System.Windows.Forms.Padding(4);
+            this.ExternalLot.Name = "ExternalLot";
+            this.ExternalLot.Size = new System.Drawing.Size(126, 20);
+            this.ExternalLot.TabIndex = 178;
+            this.ExternalLot.Text = "Use External Lot";
+            this.ExternalLot.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Location = new System.Drawing.Point(292, 36);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 28);
+            this.button1.TabIndex = 179;
+            this.button1.Text = "Print All Lot";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // BuyingProcessV2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1839,5 +1868,7 @@
         private System.Windows.Forms.TextBox textFilename;
         internal System.Windows.Forms.Button ImportButton;
         private System.Windows.Forms.CheckBox checkResidue;
+        private System.Windows.Forms.CheckBox ExternalLot;
+        internal System.Windows.Forms.Button button1;
     }
 }

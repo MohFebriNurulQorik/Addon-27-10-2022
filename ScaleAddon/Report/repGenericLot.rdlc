@@ -112,7 +112,7 @@
             <Top>1.51245in</Top>
             <Left>0.06284in</Left>
             <Height>0.19306in</Height>
-            <Width>1.25577in</Width>
+            <Width>1.13076in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -139,14 +139,15 @@
                 </TextRuns>
                 <Style>
                   <TextAlign>Left</TextAlign>
+                  <LineHeight>1pt</LineHeight>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>parBuyer</rd:DefaultName>
             <Top>1.51245in</Top>
-            <Left>1.38805in</Left>
+            <Left>1.26304in</Left>
             <Height>0.19306in</Height>
-            <Width>0.47388in</Width>
+            <Width>0.91482in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -212,9 +213,9 @@
             </Paragraphs>
             <rd:DefaultName>parDate</rd:DefaultName>
             <Top>1.51245in</Top>
-            <Left>1.99453in</Left>
+            <Left>2.17786in</Left>
             <Height>0.19306in</Height>
-            <Width>1.51968in</Width>
+            <Width>1.33635in</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>

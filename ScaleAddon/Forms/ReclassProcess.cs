@@ -1097,14 +1097,16 @@ namespace ScaleAddon.Forms
                     {
                         btnSaveLot.Enabled = false;
                         groupEntry.BackgroundImage = Properties.Resources.viewMode;
+                        btnPrintLot.Enabled = true;
                     }
                     else
                     {
                         btnSaveLot.Enabled = true;
+                        btnPrintLot.Enabled = false;
                     }
 
 
-                    btnPrintLot.Enabled = true;
+                   
                 }
                 else
                 {

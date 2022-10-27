@@ -2415,7 +2415,7 @@ namespace ScaleAddon.Forms
                 groupEntry.Text = $"Lot Entry [{lotNbr}]";
                 groupEntry.BackgroundImage = Properties.Resources.editMode;
                 tbEntryLot.Text = lotNbr;
-                btnPrintLot.Enabled = true;
+                btnPrintLot.Enabled = false;
 
                 if (checkLotNbrInSTock(lotNbr) && checkmobilegriding(lotNbr))
                 {
@@ -2427,6 +2427,7 @@ namespace ScaleAddon.Forms
                 {
                     groupEntry.BackgroundImage = Properties.Resources.viewMode;
                     btnSaveLot.Enabled = false;
+                    btnPrintLot.Enabled = true;
                     if (!checkLotNbrInSTock(lotNbr))
                     {
 
@@ -2458,6 +2459,7 @@ namespace ScaleAddon.Forms
 
         private void btnPrintLot_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("123");
             //if (!groupEntry.Text.Contains("<NEW>") && !tbDocNumber.Text.Contains("<NEW>"))
             if (!tbDocNumber.Text.Contains("<NEW>"))
             {
@@ -2606,12 +2608,10 @@ namespace ScaleAddon.Forms
                 detail.Branch = docBranch;
                 detail.InventoryID = rowView[1].ToString();
                 detail.Location = AcumaticaCred.AcumaticaInvLocation;
-                //detail.LotSerialNbr = rowView[3].ToString();
                 detail.ReceiptQty = Convert.ToDecimal(rowView[15]);
                 detail.Subitem = rowView[2].ToString().Replace(".", "");
-                //detail.TransactionDescription = rowView[0].ToString();
                 detail.TransactionDescription = rowView[3].ToString();
-                detail.UnitCost = Convert.ToDecimal(rowView[17]);
+                detail.UnitCost = Convert.ToDecimal(Convert.ToDecimal(rowView[21])/Convert.ToDecimal(rowView[15]));
                 detail.ExtendedCost = Convert.ToDecimal(rowView[21]);
                 detail.UOM = rowView[16].ToString();
                 detail.Warehouse = tbWarehouse.Text;
@@ -3369,159 +3369,239 @@ namespace ScaleAddon.Forms
 
         private void SaveImport_Click(object sender, EventArgs e)
         {
-            SqlTransaction objTrans = null;
-            try
+            this.Text = $"Universal Leaf [{Warehouse.Descr}] - Baying Process [{DocNumber}] - Import in Prosess, please wait!";
+            bool CHECKLOT = true;
+
+            if (ExternalLot.Checked)
             {
-                if (((tempPO.ToString().Trim() != null || tempPO.ToString().Trim() != "") && Convert.ToDecimal(dtDetailImport.Compute("SUM(WeightNetto)", string.Empty)) <= Convert.ToDecimal(tbPOOpenQty.Text))|| (tempPO.ToString().Trim()==null || tempPO.ToString().Trim() == ""))
+
+                foreach (DataRow row in dtDetailImport.Rows)
                 {
-                    using (SqlConnection connection = new SqlConnection(ConnectionString))
+                    if (checkLotNbrExist(row["LotNbrExt"].ToString().Trim()) || row["LotNbrExt"].ToString().Trim() == null)
                     {
-                        bool insertError = false;
-                        try
-                        {
-                            if (connection.State != ConnectionState.Open)
-                            {
-                                connection.Open();
-                                objTrans = connection.BeginTransaction();
-                            }
-
-
-                            foreach (DataRow row in dtDetailImport.Rows)
-                            {
-
-                                if (row["InventoryID"].ToString().Trim() != null &&
-                                    row["Source"].ToString().Trim() != null &&
-                                    row["Stage"].ToString().Trim() != null &&
-                                    row["Form"].ToString().Trim() != null &&
-                                    row["CropYear"].ToString().Trim() != null &&
-                                    row["Grade"].ToString().Trim() != null &&
-                                    row["Area"].ToString().Trim() != null &&
-                                    row["StalkPosition"].ToString().Trim() != null &&
-                                    row["WeightRope"].ToString().Trim() != null &&
-                                    row["WeightShipping"].ToString().Trim() != null &&
-                                    row["WeightReceive"].ToString().Trim() != null &&
-                                    row["WeightTare"].ToString().Trim() != null &&
-                                    row["WeightNetto"].ToString().Trim() != null &&
-                                    row["UoM"].ToString().Trim() != null &&
-                                    row["BuyerName"].ToString().Trim() != null &&
-                                    row["CostUnit"].ToString().Trim() != null &&
-                                    row["CostGross"].ToString().Trim() != null &&
-                                    row["NTRM"].ToString().Trim() != null &&
-                                    row["CostNett"].ToString().Trim() != null &&
-                                    row["MC"].ToString().Trim() != null &&
-                                    row["GradeDraft"].ToString().Trim() != null &&
-                                    row["Residue"].ToString().Trim() != null 
-                                    )
-                                {
-
-                                    string InventoryID = row["InventoryID"].ToString().Trim();
-                                    string Source = row["Source"].ToString().Trim();
-                                    string Stage = row["Stage"].ToString().Trim();
-                                    string Form = row["Form"].ToString().Trim();
-                                    string CropYear = row["CropYear"].ToString().Trim();
-                                    string Grade = row["Grade"].ToString().Trim();
-                                    string Area = row["Area"].ToString().Trim();
-                                    string StalkPosition = row["StalkPosition"].ToString().Trim();
-                                    string WeightRope = row["WeightRope"].ToString().Trim();
-                                    string WeightShipping = row["WeightShipping"].ToString().Trim();
-                                    string WeightReceive = row["WeightReceive"].ToString().Trim();
-                                    string WeightTare = row["WeightTare"].ToString().Trim();
-                                    string WeightNetto = row["WeightNetto"].ToString().Trim();
-                                    string UoM = row["UoM"].ToString().Trim();
-                                    string Remark = "IMPORT OUT";
-                                    string BuyerName = row["BuyerName"].ToString().Trim();
-                                    string CostUnit = row["CostUnit"].ToString().Trim();
-                                    string CostGross = row["CostGross"].ToString().Trim();
-                                    string NTRM = row["NTRM"].ToString().Trim();
-                                    string CostNTRM = row["CostNTRM"].ToString().Trim();
-                                    string CostNett = row["CostNett"].ToString().Trim();
-                                    string MC = row["MC"].ToString().Trim();
-                                    string GradeDraft = row["GradeDraft"].ToString().Trim();
-                                    string SubItem = $"{Stage}.{Form}.{CropYear}.{Grade}";
-                                    string Residue = row["Residue"].ToString().Trim();
-
-                                    using (SqlCommand command = new SqlCommand("Insert_BuyingLineDetail_v3_import", connection, objTrans))
-                                    {
-                                        command.CommandType = CommandType.StoredProcedure;
-
-                                        command.Parameters.AddWithValue("@DocumentID", DocNumber);
-                                        command.Parameters.AddWithValue("@InventoryID", InventoryID);
-                                        command.Parameters.AddWithValue("@SubItem", SubItem);
-                                        command.Parameters.AddWithValue("@LotNbr", $"{Math.Abs(FiscalInfo.CurrentFiscalYear) % 100}{Warehouse.WarehouseID}-".ToString());
-                                        command.Parameters.AddWithValue("@Source", Source);
-                                        command.Parameters.AddWithValue("@Stage", Stage);
-                                        command.Parameters.AddWithValue("@Form", Form);
-                                        command.Parameters.AddWithValue("@CropYear",CropYear);
-                                        command.Parameters.AddWithValue("@Grade", Grade);
-                                        command.Parameters.AddWithValue("@Area", Area);
-                                        command.Parameters.AddWithValue("@StalkPosition", StalkPosition);
-                                        command.Parameters.AddWithValue("@WeightRope", Convert.ToDecimal(WeightRope));
-                                        command.Parameters.AddWithValue("@WeightShipping", Convert.ToDecimal(WeightShipping));
-                                        command.Parameters.AddWithValue("@WeightReceive", Convert.ToDecimal(WeightReceive));
-                                        command.Parameters.AddWithValue("@WeightTare", Convert.ToDecimal(WeightTare));
-                                        command.Parameters.AddWithValue("@WeightNetto", Convert.ToDecimal(WeightNetto));
-                                        command.Parameters.AddWithValue("@UoM", UoM);
-                                        command.Parameters.AddWithValue("@CostUnit", CostUnit);
-                                        command.Parameters.AddWithValue("@CostGross", CostGross);
-                                        command.Parameters.AddWithValue("@NTRM", NTRM);
-                                        command.Parameters.AddWithValue("@CostNTRM", CostNTRM);
-                                        command.Parameters.AddWithValue("@CostNett", CostNett);
-                                        command.Parameters.AddWithValue("@MC", MC);
-                                        command.Parameters.AddWithValue("@Remark", "Import Buying");
-                                        command.Parameters.AddWithValue("@StatusReject",0);
-                                        command.Parameters.AddWithValue("@SyncDetail", 0);
-                                        command.Parameters.AddWithValue("@OrderNbr", tempPO);
-                                        command.Parameters.AddWithValue("@NoKontrak", tempKontrak ?? "");
-                                        command.Parameters.AddWithValue("@BuyerName", BuyerName);
-                                        command.Parameters.AddWithValue("@GradeDraft", GradeDraft);
-                                        command.Parameters.AddWithValue("@OperationType", 0);
-                                        command.Parameters.AddWithValue("@Residue", Residue);
-
-                                        command.ExecuteNonQuery();
-                                    }
-                                }
-                                else
-                                {
-                                    MessageBox.Show($"Check Imput Excel !", "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
-                            }
-                            
-                            objTrans.Commit();
-                            loadBuyingProcess();
-                            loadDetail();
-                            resetEntry();
-                            dtImport.Clear();
-                            cbosheet.Items.Clear();
-                            cbosheet.Text = "";
-                            dtDetailImport.Clear();
-                            textFilename.Clear();
-                            SaveImport.Enabled = false;
-                            MessageBox.Show("Import Success !");
-                        }
-                        catch (Exception e_update)
-                        {
-                            objTrans.Rollback();
-                            MessageBox.Show($"--Insert error! {e_update.Message}", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        }
-                        finally
-                        {
-                            if (connection.State == ConnectionState.Open)
-                            {
-                                connection.Close();
-                            }
-                        }
+                        MessageBox.Show($"Lot number {row["LotNbrExt"].ToString().Trim()} already exist, or unable to check existing lot number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        CHECKLOT = false;
+                        break;
                     }
-
-
-                }
-                else
-                {
-                    MessageBox.Show($"Total WeightNetto melebihi PO Open Qty !", "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"--{ex.Message}", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            if (CHECKLOT) {
+                SqlTransaction objTrans = null;
+                try
+                {
+                    if (((tempPO.ToString().Trim() != null || tempPO.ToString().Trim() != "") && Convert.ToDecimal(dtDetailImport.Compute("SUM(WeightNetto)", string.Empty)) <= Convert.ToDecimal(tbPOOpenQty.Text)) || (tempPO.ToString().Trim() == null || tempPO.ToString().Trim() == ""))
+                    {
+                        using (SqlConnection connection = new SqlConnection(ConnectionString))
+                        {
+                            bool insertError = false;
+                            try
+                            {
+                                if (connection.State != ConnectionState.Open)
+                                {
+                                    connection.Open();
+                                    objTrans = connection.BeginTransaction();
+                                }
+
+
+                                foreach (DataRow row in dtDetailImport.Rows)
+                                {
+
+                                    if (row["InventoryID"].ToString().Trim() != null &&
+                                        row["Source"].ToString().Trim() != null &&
+                                        row["Stage"].ToString().Trim() != null &&
+                                        row["Form"].ToString().Trim() != null &&
+                                        row["CropYear"].ToString().Trim() != null &&
+                                        row["Grade"].ToString().Trim() != null &&
+                                        row["Area"].ToString().Trim() != null &&
+                                        row["StalkPosition"].ToString().Trim() != null &&
+                                        row["WeightRope"].ToString().Trim() != null &&
+                                        row["WeightShipping"].ToString().Trim() != null &&
+                                        row["WeightReceive"].ToString().Trim() != null &&
+                                        row["WeightTare"].ToString().Trim() != null &&
+                                        row["WeightNetto"].ToString().Trim() != null &&
+                                        row["UoM"].ToString().Trim() != null &&
+                                        row["BuyerName"].ToString().Trim() != null &&
+                                        row["CostUnit"].ToString().Trim() != null &&
+                                        row["CostGross"].ToString().Trim() != null &&
+                                        row["NTRM"].ToString().Trim() != null &&
+                                        row["CostNett"].ToString().Trim() != null &&
+                                        row["MC"].ToString().Trim() != null &&
+                                        row["GradeDraft"].ToString().Trim() != null &&
+                                        row["Residue"].ToString().Trim() != null
+                                        )
+                                    {
+
+                                        string InventoryID = row["InventoryID"].ToString().Trim();
+                                        string Source = row["Source"].ToString().Trim();
+                                        string Stage = row["Stage"].ToString().Trim();
+                                        string Form = row["Form"].ToString().Trim();
+                                        string CropYear = row["CropYear"].ToString().Trim();
+                                        string Grade = row["Grade"].ToString().Trim();
+                                        string Area = row["Area"].ToString().Trim();
+                                        string StalkPosition = row["StalkPosition"].ToString().Trim();
+                                        string WeightRope = row["WeightRope"].ToString().Trim();
+                                        string WeightShipping = row["WeightShipping"].ToString().Trim();
+                                        string WeightReceive = row["WeightReceive"].ToString().Trim();
+                                        string WeightTare = row["WeightTare"].ToString().Trim();
+                                        string WeightNetto = row["WeightNetto"].ToString().Trim();
+                                        string UoM = row["UoM"].ToString().Trim();
+                                        string Remark = "IMPORT BY";
+                                        string BuyerName = row["BuyerName"].ToString().Trim();
+                                        string CostUnit = row["CostUnit"].ToString().Trim();
+                                        string CostGross = row["CostGross"].ToString().Trim();
+                                        string NTRM = row["NTRM"].ToString().Trim();
+                                        string CostNTRM = row["CostNTRM"].ToString().Trim();
+                                        string CostNett = row["CostNett"].ToString().Trim();
+                                        string MC = row["MC"].ToString().Trim();
+                                        string GradeDraft = row["GradeDraft"].ToString().Trim();
+                                        string SubItem = $"{Stage}.{Form}.{CropYear}.{Grade}";
+                                        string Residue = row["Residue"].ToString().Trim();
+
+
+
+                                        if (ExternalLot.Checked)
+                                        {
+                                            string LotNbr = row["LotNbrExt"].ToString().Trim();
+                                            if (checkLotNbrExist(LotNbr))
+                                            {
+                                                MessageBox.Show($"Lot number {LotNbr} already exist, or unable to check existing lot number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                objTrans.Rollback();
+                                                break;
+                                            }
+
+                                            using (SqlCommand command = new SqlCommand("Insert_BuyingLineDetail_v3_import_externalLot", connection, objTrans))
+                                            {
+                                                command.CommandType = CommandType.StoredProcedure;
+
+                                                command.Parameters.AddWithValue("@DocumentID", DocNumber);
+                                                command.Parameters.AddWithValue("@InventoryID", InventoryID);
+                                                command.Parameters.AddWithValue("@SubItem", SubItem);
+                                                command.Parameters.AddWithValue("@LotNbr", LotNbr);
+                                                command.Parameters.AddWithValue("@Source", Source);
+                                                command.Parameters.AddWithValue("@Stage", Stage);
+                                                command.Parameters.AddWithValue("@Form", Form);
+                                                command.Parameters.AddWithValue("@CropYear", CropYear);
+                                                command.Parameters.AddWithValue("@Grade", Grade);
+                                                command.Parameters.AddWithValue("@Area", Area);
+                                                command.Parameters.AddWithValue("@StalkPosition", StalkPosition);
+                                                command.Parameters.AddWithValue("@WeightRope", Convert.ToDecimal(WeightRope));
+                                                command.Parameters.AddWithValue("@WeightShipping", Convert.ToDecimal(WeightShipping));
+                                                command.Parameters.AddWithValue("@WeightReceive", Convert.ToDecimal(WeightReceive));
+                                                command.Parameters.AddWithValue("@WeightTare", Convert.ToDecimal(WeightTare));
+                                                command.Parameters.AddWithValue("@WeightNetto", Convert.ToDecimal(WeightNetto));
+                                                command.Parameters.AddWithValue("@UoM", UoM);
+                                                command.Parameters.AddWithValue("@CostUnit", CostUnit);
+                                                command.Parameters.AddWithValue("@CostGross", CostGross);
+                                                command.Parameters.AddWithValue("@NTRM", NTRM);
+                                                command.Parameters.AddWithValue("@CostNTRM", CostNTRM);
+                                                command.Parameters.AddWithValue("@CostNett", CostNett);
+                                                command.Parameters.AddWithValue("@MC", MC);
+                                                command.Parameters.AddWithValue("@Remark", "Import Buying");
+                                                command.Parameters.AddWithValue("@StatusReject", 0);
+                                                command.Parameters.AddWithValue("@SyncDetail", 0);
+                                                command.Parameters.AddWithValue("@OrderNbr", tempPO);
+                                                command.Parameters.AddWithValue("@NoKontrak", tempKontrak ?? "");
+                                                command.Parameters.AddWithValue("@BuyerName", BuyerName);
+                                                command.Parameters.AddWithValue("@GradeDraft", GradeDraft);
+                                                command.Parameters.AddWithValue("@OperationType", 0);
+                                                command.Parameters.AddWithValue("@Residue", Residue);
+
+                                                command.ExecuteNonQuery();
+                                            }
+
+                                        }
+                                        else {
+
+                                            using (SqlCommand command = new SqlCommand("Insert_BuyingLineDetail_v3_import", connection, objTrans))
+                                            {
+                                                command.CommandType = CommandType.StoredProcedure;
+
+                                                command.Parameters.AddWithValue("@DocumentID", DocNumber);
+                                                command.Parameters.AddWithValue("@InventoryID", InventoryID);
+                                                command.Parameters.AddWithValue("@SubItem", SubItem);
+                                                command.Parameters.AddWithValue("@LotNbr", $"{Math.Abs(FiscalInfo.CurrentFiscalYear) % 100}{Warehouse.WarehouseID}-".ToString());
+                                                command.Parameters.AddWithValue("@Source", Source);
+                                                command.Parameters.AddWithValue("@Stage", Stage);
+                                                command.Parameters.AddWithValue("@Form", Form);
+                                                command.Parameters.AddWithValue("@CropYear", CropYear);
+                                                command.Parameters.AddWithValue("@Grade", Grade);
+                                                command.Parameters.AddWithValue("@Area", Area);
+                                                command.Parameters.AddWithValue("@StalkPosition", StalkPosition);
+                                                command.Parameters.AddWithValue("@WeightRope", Convert.ToDecimal(WeightRope));
+                                                command.Parameters.AddWithValue("@WeightShipping", Convert.ToDecimal(WeightShipping));
+                                                command.Parameters.AddWithValue("@WeightReceive", Convert.ToDecimal(WeightReceive));
+                                                command.Parameters.AddWithValue("@WeightTare", Convert.ToDecimal(WeightTare));
+                                                command.Parameters.AddWithValue("@WeightNetto", Convert.ToDecimal(WeightNetto));
+                                                command.Parameters.AddWithValue("@UoM", UoM);
+                                                command.Parameters.AddWithValue("@CostUnit", CostUnit);
+                                                command.Parameters.AddWithValue("@CostGross", CostGross);
+                                                command.Parameters.AddWithValue("@NTRM", NTRM);
+                                                command.Parameters.AddWithValue("@CostNTRM", CostNTRM);
+                                                command.Parameters.AddWithValue("@CostNett", CostNett);
+                                                command.Parameters.AddWithValue("@MC", MC);
+                                                command.Parameters.AddWithValue("@Remark", "Import Buying");
+                                                command.Parameters.AddWithValue("@StatusReject", 0);
+                                                command.Parameters.AddWithValue("@SyncDetail", 0);
+                                                command.Parameters.AddWithValue("@OrderNbr", tempPO);
+                                                command.Parameters.AddWithValue("@NoKontrak", tempKontrak ?? "");
+                                                command.Parameters.AddWithValue("@BuyerName", BuyerName);
+                                                command.Parameters.AddWithValue("@GradeDraft", GradeDraft);
+                                                command.Parameters.AddWithValue("@OperationType", 0);
+                                                command.Parameters.AddWithValue("@Residue", Residue);
+
+                                                command.ExecuteNonQuery();
+                                            }
+
+                                        }
+
+
+
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show($"Check Imput Excel !", "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
+
+                                }
+
+                                objTrans.Commit();
+                                loadBuyingProcess();
+                                loadDetail();
+                                resetEntry();
+                                dtImport.Clear();
+                                cbosheet.Items.Clear();
+                                cbosheet.Text = "";
+                                dtDetailImport.Clear();
+                                textFilename.Clear();
+                                SaveImport.Enabled = false;
+                                MessageBox.Show("Import Success !");
+                            }
+                            catch (Exception e_update)
+                            {
+                                objTrans.Rollback();
+                                MessageBox.Show($"--Insert error! {e_update.Message}", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                            finally
+                            {
+                                if (connection.State == ConnectionState.Open)
+                                {
+                                    connection.Close();
+                                }
+                            }
+                        }
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Total WeightNetto melebihi PO Open Qty !", "Error Fatal", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"--{ex.Message}", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -3542,6 +3622,103 @@ namespace ScaleAddon.Forms
                 tbEntryWeightRope.BackColor = System.Drawing.SystemColors.Info;
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //btnPrintLot.Enabled = true;
+            loadDetail();
+            //fix selected row
+            foreach (DataGridViewRow row in dgvDetail.Rows)
+            {
+               
+                if (!tbDocNumber.Text.Contains("<NEW>"))
+                {
+                    if (chkLblPrint.Checked)
+                    {
+                        QRCoder.QRCodeGenerator qRCodeGenerator = new QRCoder.QRCodeGenerator();
+                        QRCodeData qrCodeData = qRCodeGenerator.CreateQrCode($"{row.Cells[3].Value.ToString()}", QRCodeGenerator.ECCLevel.Q);
+                        QRCode qrCode = new QRCode(qrCodeData);
+                        Bitmap qrCodeImage = qrCode.GetGraphic(20);
+
+                        string QRImage = ImageToBase64(qrCodeImage, System.Drawing.Imaging.ImageFormat.Bmp);
+
+                        if (optLblThermal.Checked)
+                        {
+                            BuyingProcessLotPrint lotPrint = new BuyingProcessLotPrint
+                            {
+                                Company = Warehouse.Company,
+                                Address = GetBranch(Warehouse.WarehouseID, 3),
+                                Phone = GetBranch(Warehouse.WarehouseID, 4),
+                                DocNumber = tbDocNumber.Text,
+                                BuyDate = tbBuyingDate.Text,
+                                LotNumber = row.Cells[3].Value.ToString(),
+                                VendorID = tempVendorID,
+                                VendorName = tempVendorName,
+                                VendorClass = tbVendorClass.Text,
+                                Grade = row.Cells[8].Value.ToString(),
+                                Mutu = row.Cells[6].Value.ToString(),
+                                Netto = row.Cells[15].Value.ToString(),
+                                Reject = row.Cells[24].Value.ToString()=="1" ? "REJECTED" : "",
+                                NTRM = row.Cells[19].Value.ToString()=="1" ? "Yes" : "No",
+                                MC = row.Cells[22].Value.ToString() == "1" ? "Yes" : "No",
+                                Remark = row.Cells[23].Value.ToString(),
+                                QRImage = QRImage,
+                                Warehouse = Warehouse.Descr,
+                                InventoryID = row.Cells[1].Value.ToString(),
+                                Area = row.Cells[9].Value.ToString().Substring(0, 2),
+                                Residue = row.Cells[31].Value.ToString() == "1" ? "Yes" : "No",
+                                Rope = row.Cells[11].Value.ToString()
+                            };
+                            lotPrint.ShowDialog();
+                        }
+                        else
+                        {
+                            BuyingProcessLotPrintLbl lotPrint = new BuyingProcessLotPrintLbl
+                            {
+                                Company = Warehouse.Company,
+                                Address = GetBranch(Warehouse.WarehouseID, 3),
+                                Phone = GetBranch(Warehouse.WarehouseID, 4),
+                                DocNumber = tbDocNumber.Text,
+                                BuyDate = tbBuyingDate.Text,
+                                LotNumber = row.Cells[3].Value.ToString(),
+                                VendorID = tempVendorID,
+                                VendorName = tempVendorName,
+                                VendorClass = tbVendorClass.Text,
+                                Grade = row.Cells[8].Value.ToString(),
+                                Mutu = row.Cells[6].Value.ToString(),
+                                Netto = row.Cells[15].Value.ToString(),
+                                Reject = row.Cells[24].Value.ToString() == "1" ? "REJECTED" : "",
+                                NTRM = row.Cells[19].Value.ToString() == "1" ? "Yes" : "No",
+                                MC = row.Cells[22].Value.ToString() == "1" ? "Yes" : "No",
+                                Remark = row.Cells[23].Value.ToString(),
+                                QRImage = QRImage,
+                                Warehouse = Warehouse.Descr,
+                                Source = row.Cells[4].Value.ToString(),
+                                Length = "",
+                                Process = "BY",
+                                StalkPos = row.Cells[10].Value.ToString(),
+                                Color = "",
+                                InventoryID = row.Cells[1].Value.ToString(),
+                                Buyer = tbBuyerName.Text,
+                                Ferment = "",
+                                Area = row.Cells[9].Value.ToString().Substring(0, 2),
+                                Residue = row.Cells[31].Value.ToString() == "1" ? "Yes" : "No",
+                                Rope = row.Cells[11].Value.ToString()
+                            };
+                            lotPrint.ShowDialog();
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Create a bale/lot first", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
+            }
+
+           
         }
 
         //end of file

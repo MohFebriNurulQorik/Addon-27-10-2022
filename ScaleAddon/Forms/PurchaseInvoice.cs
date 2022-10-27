@@ -1314,7 +1314,38 @@ namespace ScaleAddon.Forms
                         //string query = $"SELECT * from BuyingRegistration where RegistrationDate = '{currentDate.ToString()}'";
 
                         string query = $@"SELECT
-                                            BuyingLineDetail.*,
+                                            BuyingLineDetail.DocumentID,
+                                            BuyingLineDetail.InventoryID,
+                                            BuyingLineDetail.SubItem,
+                                            BuyingLineDetail.LotNbr,
+                                            BuyingLineDetail.Source,
+                                            BuyingLineDetail.Stage,
+                                            BuyingLineDetail.Form,
+                                            BuyingLineDetail.CropYear,
+                                            BuyingLineDetail.Grade,
+                                            BuyingLineDetail.Area,
+                                            BuyingLineDetail.StalkPosition,
+                                            BuyingLineDetail.WeightRope,
+                                            BuyingLineDetail.WeightShipping,
+                                            BuyingLineDetail.WeightReceive,
+                                            BuyingLineDetail.WeightTare,
+                                            BuyingLineDetail.WeightNetto,
+                                            BuyingLineDetail.UoM,
+                                            BuyingLineDetail.CostUnit,
+                                            BuyingLineDetail.CostGross,
+                                            BuyingLineDetail.NTRM,
+                                            BuyingLineDetail.CostNTRM,
+                                            BuyingLineDetail.CostNett,
+                                            BuyingLineDetail.MC,
+                                            BuyingLineDetail.Remark,
+                                            BuyingLineDetail.StatusReject,
+                                            BuyingLineDetail.SyncDetail,
+                                            BuyingLineDetail.OrderNbr,
+                                            BuyingLineDetail.NoKontrak,
+                                            BuyingLineDetail.BuyerName,
+                                            BuyingLineDetail.GradeDraft,
+                                            BuyingLineDetail.QCLock,
+                                            BuyingLineDetail.Residue,
 	                                        BuyingLine.AcumaticaRefNbr
                                         FROM
                                             dbo.BuyingLineDetail
@@ -1372,13 +1403,10 @@ namespace ScaleAddon.Forms
                 detail.InventoryID = rowView[1].ToString();
                 detail.Subitem = rowView[2].ToString().Replace(".", "");
                 detail.Qty = Convert.ToDecimal(rowView[15]);
-                //detail.TransactionDescription = rowView[0].ToString();
                 detail.TransactionDescription = rowView[3].ToString();
-                detail.UnitCost = Convert.ToDecimal(rowView[17]);
+                detail.UnitCost = Convert.ToDecimal(rowView[21])/Convert.ToDecimal(rowView[15]);
                 detail.ExtendedCost = Convert.ToDecimal(rowView[21]);
                 detail.UOM = rowView[16].ToString();
-                //detail.Subaccount = "01-00";
-                //detail.TaxCategory = "NONTAX";
                 detail.TaxCategory = "NONVAT";
 
                 if (rowView[26].ToString() != "")
@@ -2179,6 +2207,110 @@ namespace ScaleAddon.Forms
             else
             {
                 MessageBox.Show($"Tidak Singkron Salah", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (cbVendorID.SelectedIndex >= 0 && !tbDocNumber.Text.Contains("<NEW>"))
+            {
+                DataSetAddon myInvoice = new DataSetAddon();
+                var dataVendorClass = "";
+
+                //load data untuk grid
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    
+                    try
+                    {
+
+                        string query = $@"SELECT
+	                            b.DocumentID,
+	                            b.InventoryID,
+	                            i.Descr,
+	                            b.SubItem,
+	                            b.Grade,
+	                            b.LotNbr  AS Lot,
+	                            b.WeightReceive  AS WeightReceive,
+	                            b.WeightTare  AS WeightTare,
+	                            b.WeightNetto  AS WeightNetto,
+	                            b.CostGross  AS CostGross,
+	                            b.CostNTRM  AS CostNTRM,
+	                            b.CostNett  AS CostNett 
+                            FROM
+	                            dbo.BuyingLineDetail b
+	                            INNER JOIN dbo.InventoryItem i ON b.InventoryID = i.InventoryID 
+                            WHERE
+	                            b.DocumentID IN ( SELECT ReceiptID FROM PurchaseInvoiceDetail WHERE DocumentID = '{DocNumber}' ) 
+                            AND b.StatusReject = 0
+                            ORDER BY
+	                            b.DocumentID ASC";
+
+                        SqlCommand command = new SqlCommand(query, connection);
+                        connection.Open();
+
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        da.Fill(myInvoice.PurchaseInvoiceDetailGrade);
+                        dataVendorClass = myInvoice.PurchaseInvoiceDetailGrade.Rows[0].ItemArray[0].ToString();
+                    }
+                    catch (Exception e1)
+                    {
+                        MessageBox.Show(e1.ToString());
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }
+
+                using (SqlConnection connection = new SqlConnection(ConnectionString))
+                {
+                    //create new dt
+                    DataTable dtEntrynew = new DataTable();
+                    try
+                    {
+                        string query = "";
+
+                        query = $@"SELECT SUM(a.CostNett) as CostNett, a.NoKontrak, b.VendorClass FROM BuyingLineDetail as a left join BuyingLine as b on a.DocumentID = b.DocumentID  WHERE a.DocumentID = '{dataVendorClass}' AND a.StatusReject = 0 GROUP BY  a.NoKontrak,b.VendorClass";
+
+                        SqlCommand command = new SqlCommand(query, connection);
+                        connection.Open();
+
+                        SqlDataAdapter da = new SqlDataAdapter(command);
+                        da.Fill(dtEntrynew);
+                        tempVendorClass = dtEntrynew.Rows[0].ItemArray[2].ToString();
+
+                    }
+                    catch (Exception a)
+                    {
+                        MessageBox.Show(e.ToString());
+                    }
+                }
+
+                PurchaseInvoicePrint2 invoicePrint = new PurchaseInvoicePrint2
+                {
+                    Company = Warehouse.Company,
+                    Warehouse = Warehouse.Descr,
+                    Address = GetBranch(Warehouse.WarehouseID, 3),
+                    Phone = GetBranch(Warehouse.WarehouseID, 4),
+                    DocNumber = tbDocNumber.Text,
+                    InvoiceDate = tbProcessDate.Text,
+                    VendorID = cbVendorID.SelectedItem.ToString().Split('|')[0].Trim(),
+                    VendorDetails = tbVendorDetails.Text,
+                    invDetails = myInvoice,
+                    CashAdvance = tbCashAdvance.Text,
+                    TaxDeduct = tbDetailTax.Text,
+                    LoanDeduct = tbDetailDeduct.Text,
+                    TotalPayment = tbDetailPayment.Text,
+                    BuyerName = tbBuyerName.Text,
+                    AdminName = tbAdminInvoice.Text,
+                    VendorClass = tempVendorClass
+                };
+                invoicePrint.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Create a document / select vendor first", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

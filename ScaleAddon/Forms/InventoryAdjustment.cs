@@ -1411,6 +1411,18 @@ namespace ScaleAddon.Forms
                         bool alreadyExist = false;
 
 
+                        oldInventory.Items.Add(reader.GetValue(1).ToString());
+                        oldSource.Items.Add(reader.GetValue(4).ToString());
+                        oldStage.Items.Add(reader.GetValue(5).ToString());
+                        oldForm.Items.Add(reader.GetValue(6).ToString());
+                        oldCropYear.Items.Add(reader.GetValue(7).ToString());
+                        oldGrade.Items.Add(reader.GetValue(8).ToString());
+                        oldArea.Items.Add(reader.GetValue(9).ToString());
+                        oldColor.Items.Add(reader.GetValue(10).ToString());
+                        oldFermentation.Items.Add(reader.GetValue(11).ToString());
+                        oldLength.Items.Add(reader.GetValue(12).ToString());
+                        oldProcess.Items.Add(reader.GetValue(13).ToString());
+                        oldStalkPosition.Items.Add(reader.GetValue(14).ToString());
 
                         oldDocumentID.Text = reader.GetValue(0).ToString();
                         oldInventory.SelectedIndex = oldInventory.FindString(reader.GetValue(1).ToString());
@@ -2395,7 +2407,7 @@ namespace ScaleAddon.Forms
 
         private void btnSaveLot_Click(object sender, EventArgs e)
         {
-            //try { 
+           
 
             if (radioButton1.Checked || radioButton2.Checked || radioButton3.Checked)
             {
@@ -2476,7 +2488,7 @@ namespace ScaleAddon.Forms
 
                                 command.CommandType = CommandType.StoredProcedure;
                                 command.Parameters.AddWithValue("@DocumentID", DocNumber);
-                                command.Parameters.AddWithValue("@InventoryID", dtEntry.Rows[0]["InventoryID"].ToString());
+                                command.Parameters.AddWithValue("@InventoryID", oldInventory.SelectedItem.ToString().Split('|')[0].Trim());
                                 command.Parameters.AddWithValue("@SubItem", dtEntry.Rows[0]["SubItem"].ToString());
                                 command.Parameters.AddWithValue("@LotNbr", lotnew);
                                 command.Parameters.AddWithValue("@Source", dtEntry.Rows[0]["Source"].ToString());
@@ -2513,14 +2525,33 @@ namespace ScaleAddon.Forms
 
                             }
 
-                            string subitem = oldStage.SelectedItem.ToString().Split('|')[0].Trim() + "." + oldForm.SelectedItem.ToString().Split('|')[0].Trim() + "." + oldCropYear.SelectedItem.ToString().Split('|')[0].Trim() + "." + oldGrade.SelectedItem.ToString().Split('|')[0].Trim();
+                            string subitem = 
+                                oldStage.SelectedItem.ToString().Split('|')[0].Trim() + "." 
+                                + oldForm.SelectedItem.ToString().Split('|')[0].Trim() + "." 
+                                + oldCropYear.SelectedItem.ToString().Split('|')[0].Trim() + "." 
+                                + oldGrade.SelectedItem.ToString().Split('|')[0].Trim();
+
+
+                           string InventoryID= oldInventory.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["InventoryID"].ToString();
+                           string Source= oldSource.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Source"].ToString();
+                           string Stage= oldStage.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Stage"].ToString();
+                           string Form= oldForm.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Form"].ToString();
+                           string CropYear= oldCropYear.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["CropYear"].ToString();
+                           string Grade= oldGrade.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Grade"].ToString();
+                           string Area= oldArea.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Area"].ToString();
+                           string Color= oldColor.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Color"].ToString();
+                           string Fermentation= oldFermentation.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Fermentation"].ToString();
+                           string Length= oldLength.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Length"].ToString();
+                           string StalkPosition= oldStalkPosition.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["StalkPosition"].ToString();
+                           string Process= oldProcess.SelectedItem.ToString().Split('|')[0].Trim() ?? dtEntry.Rows[0]["Process"].ToString();
+
+
 
                             using (SqlCommand command = new SqlCommand("Insert_InventoryAdjustment_v2_Detail", connection))
                             {
-
                                 command.CommandType = CommandType.StoredProcedure;
                                 command.Parameters.AddWithValue("@DocumentID", DocNumber);
-                                command.Parameters.AddWithValue("@InventoryID", oldInventory.SelectedItem.ToString().Split('|')[0].Trim());
+                                command.Parameters.AddWithValue("@InventoryID", InventoryID);
                                 command.Parameters.AddWithValue("@SubItem", subitem);
                                 command.Parameters.AddWithValue("@LotNbr", lotnew);
                                 command.Parameters.AddWithValue("@Source", oldSource.SelectedItem.ToString().Split('|')[0].Trim());
@@ -2562,7 +2593,7 @@ namespace ScaleAddon.Forms
                 }
                 else if (radioButton3.Checked)
                 {
-                    Console.WriteLine(dtEntry.Rows[0]["Grade"].ToString());
+                   
                     if (dtEntry.Rows.Count > 0 && remark.Text.Trim() != null)
                     {
 
@@ -2631,11 +2662,7 @@ namespace ScaleAddon.Forms
 
             resetEntry();
             loadDetail();
-            //}
-            //catch (Exception asdasd)
-            //{
-            //    MessageBox.Show("Input Salah", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //}
+         
 
         }
 

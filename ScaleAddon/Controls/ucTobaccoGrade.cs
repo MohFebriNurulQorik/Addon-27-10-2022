@@ -93,7 +93,7 @@ namespace ScaleAddon.Controls
 
                 var configuration = LogIn(authApi, AcumaticaCred.AcumaticaSiteURL, AcumaticaCred.AcumaticaUser, AcumaticaCred.AcumaticaPassword, AcumaticaCred.AcumaticaTenant, AcumaticaCred.AcumaticaBranch, AcumaticaCred.AcumaticaLocale);
                 var masterGradeApi = new ULTMasterGradeV2Api(configuration);
-                var masterGrades = masterGradeApi.GetList(filter: $"Warehouse eq '{Warehouse.WarehouseID}'");
+                var masterGrades = masterGradeApi.GetList(filter: $"Warehouse eq '{Warehouse.WarehouseID}'  and Active eq true");
 
                 //insert vendor attribute
                 using (SqlConnection connection = new SqlConnection(ConnectionString))
@@ -106,7 +106,6 @@ namespace ScaleAddon.Controls
                             {
                                 connection.Open();
                             }
-
                             using (SqlCommand command = new SqlCommand("Insert_TobaccoGrade", connection))
                             {
                                 command.CommandType = CommandType.StoredProcedure;

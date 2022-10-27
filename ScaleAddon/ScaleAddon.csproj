@@ -245,6 +245,12 @@
     <Compile Include="Forms\GenericLotPrintThermal.Designer.cs">
       <DependentUpon>GenericLotPrintThermal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PurchaseInvoicePrint2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PurchaseInvoicePrint2.Designer.cs">
+      <DependentUpon>PurchaseInvoicePrint2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ReturnBuying.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -753,6 +759,9 @@
     <EmbeddedResource Include="Forms\GenericLotPrintThermal.resx">
       <DependentUpon>GenericLotPrintThermal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PurchaseInvoicePrint2.resx">
+      <DependentUpon>PurchaseInvoicePrint2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ReclassProcessDocPrintSum.resx">
       <DependentUpon>ReclassProcessDocPrintSum.cs</DependentUpon>
     </EmbeddedResource>
@@ -991,6 +1000,7 @@
     <EmbeddedResource Include="Report\repPackingLot.rdlc" />
     <EmbeddedResource Include="Report\repProcessingLineINDocSum.rdlc" />
     <EmbeddedResource Include="Report\repProcessingLineOUTDocSum.rdlc" />
+    <EmbeddedResource Include="Report\repPurchaseInvoiceDetail.rdlc" />
     <EmbeddedResource Include="Report\repReclassProcessDocSum.rdlc" />
     <EmbeddedResource Include="Report\repScaleCalibration.rdlc" />
     <EmbeddedResource Include="Report\repDirectPackingDoc.rdlc" />

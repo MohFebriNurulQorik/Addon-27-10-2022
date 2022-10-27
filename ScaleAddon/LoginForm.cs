@@ -37,7 +37,7 @@ namespace ScaleAddon
                     readerversi.Read();
 
                     Console.WriteLine(readerversi.GetValue(0).ToString());
-                    if (readerversi.GetValue(0).ToString() == $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT300822") {
+                    if (readerversi.GetValue(0).ToString() == $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT131022") {
 
                         readerversi.Close();
                         using (SqlConnection connection2 = new SqlConnection(ConnectionString))
@@ -110,7 +110,7 @@ namespace ScaleAddon
                        
                        
 
-                        MessageBox.Show($"Versi aplikasi {System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT300822 telah expired, Silakan update aplikasi ke versi {readerversi.GetValue(0).ToString()} ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show($"Versi aplikasi {System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT131022 telah expired, Silakan update aplikasi ke versi {readerversi.GetValue(0).ToString()} ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         try
                         {
                             readerversi.Close();
@@ -163,7 +163,7 @@ namespace ScaleAddon
             this.Text = $"LOGIN [{ClientID}]";
             tbWarehouse.Text = Warehouse.Descr;
           
-            lblInfo.Text = $"Scale Addon ver.{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT300822";
+            lblInfo.Text = $"Scale Addon ver.{System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT131022";
         }
 
         private void tbPassword_KeyDown(object sender, KeyEventArgs e)

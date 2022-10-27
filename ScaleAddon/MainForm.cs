@@ -289,7 +289,7 @@ namespace ScaleAddon
             if (!MyLogin.LoginCancel)
             {
                 string loginTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                toolStripStatusLabel1.Text = $"Login as {Userlog.Fullname} on {ClientID} at {loginTime} [App version {System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT190822]";
+                toolStripStatusLabel1.Text = $"Login as {Userlog.Fullname} on {ClientID} at {loginTime} [App version {System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString()}-R2ULT131022]";
             }
             else
             {
@@ -1450,6 +1450,11 @@ namespace ScaleAddon
                 FiscalInfo = FiscalInfo
             };
             MainPanel.Controls.Add(ucReturnBuying);
+        }
+
+        private void MainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

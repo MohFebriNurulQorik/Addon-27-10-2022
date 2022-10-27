@@ -321,7 +321,6 @@ namespace ScaleAddon.Forms
                 dtAllocation = new DataTable();
                 try
                 {
-                    //string query = $"SELECT * from BuyingRegistration where RegistrationDate = '{currentDate.ToString()}'";
 
                     string query = $@"SELECT *
                                         FROM
@@ -862,9 +861,6 @@ namespace ScaleAddon.Forms
                     //loadDetail();
                     //resetEntry();
                     tbTotalQty.Text = "0";
-
-                    cbLot.SelectedIndex = -1;
-                    cbLot.Items.Clear();
                 }
             }
         }
@@ -872,7 +868,6 @@ namespace ScaleAddon.Forms
         private void loadComboLot()
         {
           
-            cbLot.SelectedIndex = -1;
             using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
                 //clear combo
@@ -899,9 +894,9 @@ namespace ScaleAddon.Forms
                     da.Fill(dtLot);
                     string[] arrray = dtLot.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
 
-                    new AutoCompleteBehavior(cbLot);
-                    cbLot.Items.Clear();
-                    cbLot.Items.AddRange(arrray);
+                    //new AutoCompleteBehavior(cbLot);
+                    //cbLot.Items.Clear();
+                    //cbLot.Items.AddRange(arrray);
                 }
                 catch (Exception e)
                 {
@@ -921,13 +916,6 @@ namespace ScaleAddon.Forms
             }
         }
 
-        private void cbLot_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbLot.SelectedIndex >= 0)
-            {
-                loadEntry(cbLot.SelectedItem.ToString());
-            }
-        }
 
         private void btnSaveLot_Click(object sender, EventArgs e)
         {
@@ -1058,7 +1046,6 @@ namespace ScaleAddon.Forms
                         //resetEntry();
                         loadAllocation();
                         groupEntry.Text = $"Lot Entry [{tbEntryLot.Text}]";
-                        cbLot.SelectedIndex = -1;
                         loadComboLot();
                     }
                 }
@@ -1117,7 +1104,6 @@ namespace ScaleAddon.Forms
                     //resetEntry();
                     loadAllocation();
                     resetEntry();
-                    cbLot.SelectedIndex = -1;
                     loadComboLot();
                 }
             }
@@ -1495,27 +1481,10 @@ namespace ScaleAddon.Forms
                             reader.Read();
 
                             LotStockItem = reader.GetValue(0).ToString();
+                            Console.WriteLine(LotStockItem);
                             if (Convert.ToInt32(reader.GetValue(1)) == 1)
                             {
-                                int index = cbLot.FindStringExact(tbLot.Text);
-
-                                if (index >= 0)
-                                {
-                                    cbLot.SelectedIndex = index;
-                                    if (e.KeyChar == '\r')
-                                    {
-                                        if (this.ActiveControl != null)
-                                        {
-                                            this.SelectNextControl(this.ActiveControl, true, true, true, true);
-                                        }
-                                        e.Handled = true; // Mark the event as handled
-                                    }
-
-                                }
-                                else
-                                {
-                                    MessageBox.Show($"Lot number tidak tersedia !");
-                                }
+                                loadEntry(tbLot.Text);
                             }
 
                         }
@@ -1533,22 +1502,6 @@ namespace ScaleAddon.Forms
                 }
             }
         }
-
-        private void btnToogle_Click(object sender, EventArgs e)
-        {
-            if (tbLot.Visible)
-            {
-                tbLot.Visible = false;
-                cbLot.Visible = true;
-            }
-            else
-            {
-                tbLot.Visible = true;
-                cbLot.Visible = false;
-            }
-        }
-
-
 
         private string GetBranch(string warehouseID, int wData)
         {
